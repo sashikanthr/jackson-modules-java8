@@ -31,7 +31,6 @@ import java.time.format.DateTimeFormatter;
 import java.time.temporal.Temporal;
 
 import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertNotEquals;
 import static org.junit.Assert.assertNotNull;
 
 public class InstantSerTest extends ModuleTestBase
@@ -190,13 +189,9 @@ public class InstantSerTest extends ModuleTestBase
             }
         }
 
-        // ObjectMapper objectMapper = Jackson2ObjectMapperBuilder.json()
-        // .featuresToEnable(MapperFeature.DEFAULT_VIEW_INCLUSION,
-        //     DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES,
-        //     SerializationFeature.INDENT_OUTPUT);
         String value = MAPPER.writer()
         .without(SerializationFeature.WRITE_DATES_AS_TIMESTAMPS)
         .writeValueAsString(new TempClass(1420324047));
-        assertNotEquals("The decimals should be deprecated.", "\"{\"registered_at\":1420324047.000000000}\"", value);
+        assertEquals("The decimals should be deprecated.", "{\"registered_at\":1420324047.000000000}", value);
     }
 }
