@@ -39,12 +39,17 @@ public class InstantSerializer extends InstantSerializerBase<Instant>
 
     protected InstantSerializer(InstantSerializer base,
             Boolean useTimestamp, DateTimeFormatter formatter) {
-        this(base, formatter, useTimestamp, null);
+        this(base, formatter, useTimestamp, null, null);
     }
 
     protected InstantSerializer(InstantSerializer base, DateTimeFormatter formatter,
             Boolean useTimestamp, Boolean useNanoseconds) {
-        super(base, formatter, useTimestamp, useNanoseconds);
+        this(base, formatter, useTimestamp, useNanoseconds, null);
+    }
+
+    protected InstantSerializer(InstantSerializer base, DateTimeFormatter formatter,
+            Boolean useTimestamp, Boolean useNanoseconds, Boolean useFraction) {
+        super(base, formatter, useTimestamp, useNanoseconds, useFraction);
     }
 
     @Override
@@ -55,7 +60,7 @@ public class InstantSerializer extends InstantSerializerBase<Instant>
     }
 
     @Override
-    protected JSR310FormattedSerializerBase<?> withFeatures(Boolean writeZoneId, Boolean writeNanoseconds) {
-        return new InstantSerializer(this, _formatter, _useTimestamp, writeNanoseconds);
+    protected JSR310FormattedSerializerBase<?> withFeatures(Boolean writeZoneId, Boolean writeNanoseconds, Boolean useFraction) {
+        return new InstantSerializer(this, _formatter, _useTimestamp, writeNanoseconds, useFraction);
     }
 }

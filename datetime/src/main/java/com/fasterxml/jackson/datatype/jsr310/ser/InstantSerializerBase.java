@@ -63,9 +63,9 @@ public abstract class InstantSerializerBase<T extends Temporal>
 
     protected InstantSerializerBase(InstantSerializerBase<T> base,
             DateTimeFormatter dtf,
-            Boolean useTimestamp,  Boolean useNanoseconds)
+            Boolean useTimestamp, Boolean useNanoseconds, Boolean useFraction)
     {
-        super(base, dtf, useTimestamp, useNanoseconds, null);
+        super(base, dtf, useTimestamp, useNanoseconds, useFraction, null);
         defaultFormat = base.defaultFormat;
         getEpochMillis = base.getEpochMillis;
         getEpochSeconds = base.getEpochSeconds;
@@ -82,9 +82,13 @@ public abstract class InstantSerializerBase<T extends Temporal>
     {
         if (useTimestamp(provider)) {
             if (useNanoseconds(provider)) {
-                generator.writeNumber(DecimalUtils.toBigDecimal(
-                        getEpochSeconds.applyAsLong(value), getNanoseconds.applyAsInt(value)
-                ));
+                if (_useFraction != null && !_useFraction) {
+                    generator.writeNumber(getEpochMillis.applyAsLong(value) / 1000);
+                } else {
+                    generator.writeNumber(DecimalUtils.toBigDecimal(
+                            getEpochSeconds.applyAsLong(value), getNanoseconds.applyAsInt(value)
+                    ));
+                }
                 return;
             }
             generator.writeNumber(getEpochMillis.applyAsLong(value));

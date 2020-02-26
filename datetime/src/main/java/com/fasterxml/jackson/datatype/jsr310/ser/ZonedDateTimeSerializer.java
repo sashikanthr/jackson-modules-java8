@@ -35,7 +35,7 @@ public class ZonedDateTimeSerializer extends InstantSerializerBase<ZonedDateTime
             Boolean useTimestamp, Boolean useNanoseconds,
             Boolean writeZoneId)
     {
-        super(base, formatter, useTimestamp, useNanoseconds);
+        super(base, formatter, useTimestamp, useNanoseconds, null);
         _writeZoneId = writeZoneId;
     }
 

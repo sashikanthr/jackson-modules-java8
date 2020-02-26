@@ -22,7 +22,7 @@ public class OffsetDateTimeSerializer extends InstantSerializerBase<OffsetDateTi
     protected OffsetDateTimeSerializer(OffsetDateTimeSerializer base,
             DateTimeFormatter formatter,
             Boolean useTimestamp, Boolean useNanoseconds) {
-        super(base, formatter, useTimestamp, useNanoseconds);
+        super(base, formatter, useTimestamp, useNanoseconds, null);
     }
 
     @Override

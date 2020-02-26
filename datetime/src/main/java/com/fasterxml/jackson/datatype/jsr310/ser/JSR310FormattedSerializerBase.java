@@ -49,6 +49,11 @@ abstract class JSR310FormattedSerializerBase<T>
     protected final Boolean _useNanoseconds;
 
     /**
+     * Issue #116
+     */
+    protected final Boolean _useFraction;
+
+    /**
      * Specific format to use, if not default format: non null value
      * also indicates that serialization is to be done as JSON String,
      * not numeric timestamp, unless {@link #_useTimestamp} is true.
@@ -74,6 +79,7 @@ abstract class JSR310FormattedSerializerBase<T>
         super(supportedType);
         _useTimestamp = null;
         _useNanoseconds = null;
+        _useFraction = null;
         _shape = null;
         _formatter = formatter;
     }
@@ -96,6 +102,20 @@ abstract class JSR310FormattedSerializerBase<T>
         super(base.handledType());
         _useTimestamp = useTimestamp;
         _useNanoseconds = useNanoseconds;
+        _useFraction = Boolean.TRUE;
+        _formatter = dtf;
+        _shape = shape;
+    }
+
+    protected JSR310FormattedSerializerBase(JSR310FormattedSerializerBase<?> base,
+            DateTimeFormatter dtf,
+            Boolean useTimestamp, Boolean useNanoseconds, Boolean useFraction, 
+            JsonFormat.Shape shape)
+    {
+        super(base.handledType());
+        _useTimestamp = useTimestamp;
+        _useNanoseconds = useNanoseconds;
+        _useFraction = useFraction;
         _formatter = dtf;
         _shape = shape;
     }
@@ -105,6 +125,11 @@ abstract class JSR310FormattedSerializerBase<T>
 
     protected JSR310FormattedSerializerBase<?> withFeatures(Boolean writeZoneId,
             Boolean writeNanoseconds) {
+        return this;
+    }
+
+    protected JSR310FormattedSerializerBase<?> withFeatures(Boolean writeZoneId,
+            Boolean writeNanoseconds, Boolean useFraction) {
         return this;
     }
 
@@ -124,15 +149,20 @@ abstract class JSR310FormattedSerializerBase<T>
                 useTimestamp = (shape == JsonFormat.Shape.STRING) ? Boolean.FALSE : null;
             }
             DateTimeFormatter dtf = _formatter;
+            Boolean useFraction = Boolean.TRUE;
 
             // If not, do we have a pattern?
             if (format.hasPattern()) {
                 final String pattern = format.getPattern();
                 final Locale locale = format.hasLocale() ? format.getLocale() : prov.getLocale();
-                if (locale == null) {
-                    dtf = DateTimeFormatter.ofPattern(pattern);
+                if (pattern.equals("changf")) {
+                    useFraction = Boolean.FALSE;
                 } else {
-                    dtf = DateTimeFormatter.ofPattern(pattern, locale);
+                    if (locale == null) {
+                        dtf = DateTimeFormatter.ofPattern(pattern);
+                    } else {
+                        dtf = DateTimeFormatter.ofPattern(pattern, locale);
+                    }
                 }
                 //Issue #69: For instant serializers/deserializers we need to configure the formatter with
                 //a time zone picked up from JsonFormat annotation, otherwise serialization might not work
@@ -146,8 +176,8 @@ abstract class JSR310FormattedSerializerBase<T>
             }
             Boolean writeZoneId = format.getFeature(JsonFormat.Feature.WRITE_DATES_WITH_ZONE_ID);
             Boolean writeNanoseconds = format.getFeature(JsonFormat.Feature.WRITE_DATE_TIMESTAMPS_AS_NANOSECONDS);
-            if ((writeZoneId != null) || (writeNanoseconds != null)) {
-                ser = ser.withFeatures(writeZoneId, writeNanoseconds);
+            if ((writeZoneId != null) || (writeNanoseconds != null) || (useFraction != null)) {
+                ser = ser.withFeatures(writeZoneId, writeNanoseconds, useFraction);
             }
             return ser;
         }
