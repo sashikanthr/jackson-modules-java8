@@ -6,9 +6,8 @@
 
 * Name: jackson-modules-java8
 * URL: <https://github.com/FasterXML/jackson-modules-java8>
-* Set of support modules for Java 8 datatypes (Optionals, date/time) and features (parameter names). Used by the Jackson JSON parser. (Is this correct?)
+* A set of support modules for Java 8 datatypes (Optionals, date/time) and features (parameter names), used by the Jackson JSON parser. 
 
-> TODO: One or two sentences describing it
 
 ## Onboarding experience
 
@@ -108,14 +107,14 @@ The requirements for the solution of this issue are the following:
 
 *For each team member, how much time was spent in*
 
-1. *plenary discussions/meetings;*
-2. *discussions within parts of the group;*
-3. *reading documentation;*
-4. *configuration and setup;*
-5. *analyzing code/output;*
-6. *writing documentation;*
-7. *writing code;*
-8. *running code?*
+Name | plenary discussions/meetings | discussions within parts of the group | reading documentation | configuration and setup | analyzing code/output | writing documentation | writing code | running code
+-----|--------------------------------|-----------------------------------------|-------------------------|---------------------------|-----------------------|-------------------------|---------------|---------
+Chang | - | - | - | - | - | - | - | - |
+Jacob | - | - | - | - | - | - | - | - |
+Johan | - | - | - | - | - | - | - | - |
+Sash | - | - | - | - | - | - | - | - |
+Nour | 7 | 7 | 2 | 1 | 2 | 4 | 1 | 1 |
+
 
 *For setting up tools and libraries (step 4), enumerate all dependencies you took care of and where you spent your time, if that time exceeds 30 minutes.*
 
