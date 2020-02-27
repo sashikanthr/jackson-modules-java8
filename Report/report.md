@@ -17,11 +17,7 @@
 
 The project uses `maven` as the build tool and it built correctly on all our machines from the beginning. All tests 593 tests pass and no tests are skipped.
 
-## UML class diagram and its description
-
-*Optional (point 1): Architectural overview.*
-
-*Optional (point 2): relation to design pattern(s).*
+## UML class diagram and the project description
 
 This project (as the creators of the repo wrote) is a multi-module umbrella project for \[Jackson\](<https://github.com/FasterXML/jackson-modules-java8>) modules needed to support Java 8 features, especially with Jackson 2.x that only requires Java 7 for running (and until 2.7 only Java 6).
 
@@ -117,11 +113,12 @@ Name | plenary discussions/meetings | discussions within parts of the group | re
 Chang | - | - | - | - | - | - | - | - |
 Jacob | - | - | - | - | - | - | - | - |
 Johan | - | - | - | - | - | - | - | - |
-Sash | - | - | - | - | - | - | - | - |
-Nour | 7 | 7 | 2 | 1 | 2 | 4 | 1 | 1 |
-
+Sashikanth | - | - | - | - | - | - | - | - |
+Nour | 7 | 7 | 2 | 1 | 2.5 | 5 | 1 | 1 |
 
 *For setting up tools and libraries (step 4), enumerate all dependencies you took care of and where you spent your time, if that time exceeds 30 minutes.*
+Nour: I had some small problem with JAVA_HOME (it wasn't set up correctly). I had also an issue with maven, but once I installed mave 
+correctly and set up JAVA_Home correctly, the project compiled and the all the tests succeeded. 
 
 ## Overall experience
 
