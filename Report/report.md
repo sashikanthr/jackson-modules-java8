@@ -19,7 +19,7 @@ The project uses `maven` as the build tool and it built correctly on all our mac
 
 ## UML class diagram and the project description
 
-This project (as the creators of the repo wrote) is a multi-module umbrella project for \[Jackson\](<https://github.com/FasterXML/jackson-modules-java8>) modules needed to support Java 8 features, especially with Jackson 2.x that only requires Java 7 for running (and until 2.7 only Java 6).
+This project (as the creators of the repo wrote) is a multi-module umbrella project for [Jackson](<https://github.com/FasterXML/jackson-modules-java8>) modules needed to support Java 8 features, especially with Jackson 2.x that only requires Java 7 for running (and until 2.7 only Java 6).
 
 This project/repo consists of 3 models:
 
