@@ -137,18 +137,21 @@ future patch.
 
 *For each team member, how much time was spent in*
 
-Name | plenary discussions/meetings | discussions within parts of the group | reading documentation | configuration and setup | analyzing code/output | writing documentation | writing code | running code
------|--------------------------------|-----------------------------------------|-------------------------|---------------------------|-----------------------|-------------------------|---------------|---------
-Chang | 6 | 2 | 3 | 0.5 | 7 | 2 | 4 | 0.5 |
-Jacob | - | - | - | - | - | - | - | - |
-Johan | 6 | 3 | 2 | 0.5 | 7 | 1 | 4 | 0.5 |
-Sashikanth | 6 | 4 | 2 | 1 | 6 | 1 | 4 | 1 |
-Nour | 7 | 7 | 2 | 1 | 2.5 | 5 | 1 | 1 |
+| Name       | plenary discussions/meetings   | discussions within parts of the group | reading documentation | configuration and setup | analyzing code/output | writing documentation | writing code | running code |
+| ---------- | ------------------------------ | ------------------------------------- | --------------------- | ----------------------- | --------------------- | --------------------- | ------------ | ------------ |
+| Chang      | 6                              | 2                                     | 3                     | 0.5                     | 7                     | 2                     | 4            | 0.5          |
+| Jacob      | 6                              | 3                                     | 2                     | 4                       | 3                     | 1                     | 3            | 1            |
+| Johan      | 6                              | 3                                     | 2                     | 0.5                     | 7                     | 1                     | 4            | 0.5          |
+| Sashikanth | 6                              | 4                                     | 2                     | 1                       | 6                     | 1                     | 4            | 1            |
+| Nour       | 7                              | 7                                     | 2                     | 1                       | 2.5                   | 5                     | 1            | 1            |
 
 *For setting up tools and libraries (step 4), enumerate all dependencies you took care of and where you spent your time, if that time exceeds 30 minutes.*
 
-Nour: I had some small problem with JAVA_HOME (it wasn't set up correctly). I had also an issue with maven, but once I installed mave 
+- Nour: I had some small problem with JAVA_HOME (it wasn't set up correctly). I had also an issue with maven, but once I installed mave 
 correctly and set up JAVA_Home correctly, the project compiled and the all the tests succeeded. 
+
+- Jacob: All tests but one ran correctly on my main machine, took quite some time to try and understad what caused the issue. Did not fully get to the bottom of it in order to file an issue, but it seems like an issue with the java version used. Might look further into it later but I stopped since it was working fully on my secondary computer and to work on the issue instead of setup.
+
 
 ### Statement of Contributions
 
@@ -160,6 +163,14 @@ correctly and set up JAVA_Home correctly, the project compiled and the all the t
 - Provide a simple solution to the issue. 
 
 #### Jacob (@jadlers)
+
+- Involved in discussions on the project
+- Analysed the code and architecture to understand the issue.
+- Looked into potential issues with deserialization caused by the new feature
+- Created a build environment to locally develop the two modules
+  `jackson-modules-8` and `databind`
+- Added a new feature along with documentation to `databind` necessary for the
+  changes made in `jackson-modules-8`
 
 #### Johan (@ande9)
 - Involved in discussions on the project.
