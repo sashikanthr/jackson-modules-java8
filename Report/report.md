@@ -118,7 +118,7 @@ This is the structure of the issue after we addressed it.
 
 Both our solutions are clean in terms of code structure as well as output cleanness. 
 
-Solution 1 uses variable `_seFraction` as a flag, pretty much like the variable `_useNanoseconds`, 
+Solution 1 uses variable `_useFraction` as a flag, pretty much like the variable `_useNanoseconds`, 
 which brings high complexity into the code. It works well on all test cases, but to some extent 
 it increases complexity and reduce the readability. 
 
@@ -139,7 +139,7 @@ future patch.
 
 Name | plenary discussions/meetings | discussions within parts of the group | reading documentation | configuration and setup | analyzing code/output | writing documentation | writing code | running code
 -----|--------------------------------|-----------------------------------------|-------------------------|---------------------------|-----------------------|-------------------------|---------------|---------
-Chang | - | - | - | - | - | - | - | - |
+Chang | 6 | 2 | 3 | 0.5 | 7 | 2 | 4 | 0.5 |
 Jacob | - | - | - | - | - | - | - | - |
 Johan | 6 | 3 | 2 | 0.5 | 7 | 1 | 4 | 0.5 |
 Sashikanth | 6 | 4 | 2 | 1 | 6 | 1 | 4 | 1 |
@@ -153,6 +153,11 @@ correctly and set up JAVA_Home correctly, the project compiled and the all the t
 ### Statement of Contributions
 
 #### Chang (@changf)
+
+- Involved in discussions on the project.
+- Analysed the code and architecture to understand the issue.
+- Create test cases for the issue for understanding and testing. 
+- Provide a simple solution to the issue. 
 
 #### Jacob (@jadlers)
 
