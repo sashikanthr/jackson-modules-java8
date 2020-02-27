@@ -82,8 +82,8 @@ public abstract class InstantSerializerBase<T extends Temporal>
     {
         if (useTimestamp(provider)) {
              if (withoutFraction(provider)) {
-            generator.writeNumber(getEpochMillis.applyAsLong(value) / 1000);
-            return;
+                generator.writeNumber(getEpochMillis.applyAsLong(value) / 1000);
+                return;
             } else if (useNanoseconds(provider)) {
                 generator.writeNumber(DecimalUtils.toBigDecimal(
                         getEpochSeconds.applyAsLong(value), getNanoseconds.applyAsInt(value)

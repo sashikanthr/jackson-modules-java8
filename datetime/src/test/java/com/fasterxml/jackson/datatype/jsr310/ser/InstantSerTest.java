@@ -177,88 +177,57 @@ public class InstantSerTest extends ModuleTestBase
                 "[\"" + Instant.class.getName() + "\",\"" + FORMATTER.format(date) + "\"]", value);
     }
 
+    /**
+     * When {@link
+     * com.fasterxml.jackson.code.jackson-databind.WRITE_TIMESTAMPS_WITHOUT_FRACTION}
+     * is enabled no fraction is added to the serialized string.
+     *
+     * @throws Exception
+     */
     @Test
-    public void testSerializationOriginalIssue() throws Exception
+    public void testSerializationWithFractionFlag() throws Exception
     {
         class TempClass {
             @JsonProperty("registered_at")
             @JsonFormat(shape = JsonFormat.Shape.NUMBER)
-            private Instant registeredAt;      
-            
+            private Instant registeredAt;
+
             public TempClass(long seconds, int nanos) {
                 this.registeredAt = Instant.ofEpochSecond(seconds, nanos);
             }
         }
 
         String value = MAPPER.writer()
-          .without(SerializationFeature.WRITE_DATES_AS_TIMESTAMPS)
           .with(SerializationFeature.WRITE_TIMESTAMPS_WITHOUT_FRACTION)
-          .writeValueAsString(new TempClass(1420324047, 123456));
-        assertEquals("The decimals should be deprecated.", "{\"registered_at\":1420324047}", value);
+          .writeValueAsString(new TempClass(1420324047L, 123456));
+        assertEquals("The value should not include any decimals.", "{\"registered_at\":1420324047}", value);
     }
 
+    /**
+     * When both WRITE_TIMESTAMPS_WITHOUT_FRACTION and
+     * WRITE_DATE_TIMESTAMPS_AS_NANOSECONDS from {@link
+     * com.fasterxml.jackson.code.jackson-databind} are enabled the former one
+     * has priority.
+     *
+     * @throws Exception
+     */
     @Test
-    public void testSerializationSolutionByIssuer() throws Exception
+    public void testSerializationFractionPriority() throws Exception
     {
         class TempClass {
             @JsonProperty("registered_at")
             @JsonFormat(shape = JsonFormat.Shape.NUMBER)
-            private Instant registeredAt;      
-            
-            public TempClass(long seconds, int nanos) {
-                this.registeredAt = Instant.ofEpochSecond(seconds, nanos);
-            }
+            private Instant registeredAt;
 
-            @JsonGetter("registered_at")
-            public long getEpoch() {
-                return registeredAt.getEpochSecond();
-            }
-        }
-
-        String value = MAPPER.writer()
-        .without(SerializationFeature.WRITE_DATES_AS_TIMESTAMPS)
-        .writeValueAsString(new TempClass(1420324047, 123456));
-        assertEquals("The decimals should be deprecated.", "{\"registered_at\":1420324047}", value);
-    }
-
-    @Test
-    public void testSerializationDisableTimestamps() throws Exception
-    {
-        class TempClass {
-            @JsonProperty("registered_at")
-            // Line 1
-            // @JsonFormat(shape = JsonFormat.Shape.NUMBER)
-            private Instant registeredAt;      
-            
             public TempClass(long seconds, int nanos) {
                 this.registeredAt = Instant.ofEpochSecond(seconds, nanos);
             }
         }
 
         String value = MAPPER.writer()
-        // Line 2
-        .without(SerializationFeature.WRITE_DATES_AS_TIMESTAMPS)
-        .writeValueAsString(new TempClass(1420324047, 123456));
-        assertEquals("The decimals should be deprecated.", "{\"registered_at\":\"2015-01-03T22:27:27.000123456Z\"}", value);
+          .with(SerializationFeature.WRITE_DATE_TIMESTAMPS_AS_NANOSECONDS)
+          .with(SerializationFeature.WRITE_TIMESTAMPS_WITHOUT_FRACTION)
+          .writeValueAsString(new TempClass(1420324047L, 123456));
+        assertEquals("The value does not include any decimals.", "{\"registered_at\":1420324047}", value);
     }
-
-    @Test
-    public void testSerializationDisableNanoseconds() throws Exception
-    {
-        class TempClass {
-            @JsonProperty("registered_at")
-            @JsonFormat(shape = JsonFormat.Shape.NUMBER)
-            private Instant registeredAt;      
-            
-            public TempClass(long seconds, int nanos) {
-                this.registeredAt = Instant.ofEpochSecond(seconds, nanos);
-            }
-        }
-
-        String value = MAPPER.writer()
-        .without(SerializationFeature.WRITE_DATE_TIMESTAMPS_AS_NANOSECONDS)
-        .writeValueAsString(new TempClass(1420324047, 123456));
-        assertEquals("The decimals should be deprecated.", "{\"registered_at\":1420324047000}", value);
-    }
-
 }
