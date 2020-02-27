@@ -44,27 +44,32 @@ The the second module is the longest one and has many classes. it has also the m
 
 The following diagram represent the overall UML diagram for the classes in the `deser`:
 
-![DeserImage](<images/PackageDeser.png>)
-
-> TODO: Do i need to write about the key package inside the "deser" package
->
-> Something like: Note that there is a package called "key" inside "deser"
+![DeserImage](<PackageDeser.png>)
 
 The following diagram represent the overall UML diagram for the classes in the `ser`:
 
-![serImage](<images/PackageSer.png>)
+![serImage](<PackageSer.png>)
 
+Note that in both `deser` and `ser` packages there is another package called `key`. The `key` package in the `ser` 
+has just one class. But the `key` package in the `deser` package has many classes. The java classes in the key packages 
+define also API used for serializing/deserializing some date/time data types. For example in the the `key` package in 
+the `deser` package many java classes there are children of the abstract class `KeyDeserializer`. And according to 
+the documentation, this class defines API used for deserializing JSON content field names into Java Map keys.
+While many classes in the main `deser` package are children of the abstract class `JsonDeserializer` which defines 
+according to the documentation an API used by ObjectMapper (and other chained JsonDeserializers too) to deserialize 
+Objects of arbitrary types from JSON, using provided JsonParser.
+                               
 The issue that we are trying to fix is located in a function called `serialize()` in the class `InstantSerializerBase` in the `ser` package. That is why, we will focus little more in it and give a little more deeper investigation and explanation:
 
 The `InstantSerializer` class extends the class `InstantSerializerBase`. Thus, when a function wants to serialize an instance of `InstantSerializer`, the function need to call the function `serialize()` in the parent class i.e. in `InstantSerializerBase`. However this class also extends another class called `JSR310FormattedSerializerBase`.
 
 The child class `InstantSerializer` is actually just a class that initialize or create an object of `InstantSerializer` which is actually an object of the `InstantSerializerBase` class. No more methods exists in `InstantSerializer` class. The following UML diagram explains in more details the relationships and the dependencies between these classes and even little other classes:
 
-![InstantSerializer](<images/InstantSerializer.png>)
+![InstantSerializer](<InstantSerializer.png>)
 
 However, as written in the requirements below, we need to fix things in the corresponding derserilazer classes e.g. `InstantDeserializer`, `JSR310DateTimeDeserializerBase` and `JSR310DeserializerBase` if we change something in the serializer classes mentioned above. The image below has a UML diagram that explain the dependencies and relationships between these classes:
 
-![InstantDerserializer](<images/InstantDeserializer.png>)
+![InstantDerserializer](<InstantDeserializer.png>)
 
 ## Selected issue(s)
 
