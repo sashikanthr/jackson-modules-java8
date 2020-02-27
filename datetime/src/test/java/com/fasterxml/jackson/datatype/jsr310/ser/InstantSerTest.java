@@ -193,7 +193,7 @@ public class InstantSerTest extends ModuleTestBase
         String value = MAPPER.writer()
         .without(SerializationFeature.WRITE_DATES_AS_TIMESTAMPS)
         .writeValueAsString(new TempClass(1420324047, 123456));
-        assertEquals("The decimals should be deprecated.", "{\"registered_at\":1420324047.000123456}", value);
+        assertEquals("The value is not correct.", "{\"registered_at\":1420324047.000123456}", value);
     }
 
     @Test
@@ -238,7 +238,7 @@ public class InstantSerTest extends ModuleTestBase
         // Line 2
         .without(SerializationFeature.WRITE_DATES_AS_TIMESTAMPS)
         .writeValueAsString(new TempClass(1420324047, 123456));
-        assertEquals("The decimals should be deprecated.", "{\"registered_at\":\"2015-01-03T22:27:27.000123456Z\"}", value);
+        assertEquals("The value is not correct.", "{\"registered_at\":\"2015-01-03T22:27:27.000123456Z\"}", value);
     }
 
     @Test
@@ -265,7 +265,7 @@ public class InstantSerTest extends ModuleTestBase
     {
         class TempClass {
             @JsonProperty("registered_at")
-            @JsonFormat(shape = JsonFormat.Shape.NUMBER, pattern = "changf")
+            @JsonFormat(shape = JsonFormat.Shape.NUMBER, pattern = "noFraction")
             private Instant registeredAt;      
             
             public TempClass(long seconds, int nanos) {
@@ -295,7 +295,7 @@ public class InstantSerTest extends ModuleTestBase
         String value = MAPPER.writer()
         // .without(SerializationFeature.WRITE_DATE_TIMESTAMPS_AS_NANOSECONDS)
         .writeValueAsString(new TempClass(1420324047L, 123456));
-        assertEquals("The decimals should be deprecated.", "{\"registered_at\":1420324047.000123456}", value);
+        assertEquals("The value is not correct.", "{\"registered_at\":1420324047.000123456}", value);
     }
 
 }

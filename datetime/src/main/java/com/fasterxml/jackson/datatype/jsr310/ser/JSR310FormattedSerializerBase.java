@@ -155,7 +155,7 @@ abstract class JSR310FormattedSerializerBase<T>
             if (format.hasPattern()) {
                 final String pattern = format.getPattern();
                 final Locale locale = format.hasLocale() ? format.getLocale() : prov.getLocale();
-                if (pattern.equals("changf")) {
+                if (pattern.equals("noFraction")) {
                     useFraction = Boolean.FALSE;
                 } else {
                     if (locale == null) {
