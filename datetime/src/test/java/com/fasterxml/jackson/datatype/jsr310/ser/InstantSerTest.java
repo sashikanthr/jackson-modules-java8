@@ -177,6 +177,13 @@ public class InstantSerTest extends ModuleTestBase
                 "[\"" + Instant.class.getName() + "\",\"" + FORMATTER.format(date) + "\"]", value);
     }
 
+    /**
+     * Reproduce the issue #116. 
+     * There is no simple way to make serializer explicitly ignore the fraction part. 
+     * By default, the fraction part remains. 
+     * 
+     * @throws Exception
+     */
     @Test
     public void testSerializationOriginalIssue() throws Exception
     {
@@ -196,6 +203,13 @@ public class InstantSerTest extends ModuleTestBase
         assertEquals("The value is not correct.", "{\"registered_at\":1420324047.000123456}", value);
     }
 
+    /**
+     * One possible solution provided by issuer. 
+     * Use function `getEpoch()` to explicitly return the second part of Instant. 
+     * The fraction part will be removed. 
+     * 
+     * @throws Exception
+     */
     @Test
     public void testSerializationSolutionByIssuer() throws Exception
     {
@@ -220,6 +234,11 @@ public class InstantSerTest extends ModuleTestBase
         assertEquals("The decimals should be deprecated.", "{\"registered_at\":1420324047}", value);
     }
 
+    /**
+     * `useTimestamp` will be disabled only when
+     * JsonPrroperty is removed (Line 1) and `WRITE_DATES_AS_TIMESTAMPS` is disabled (Line 2). 
+     * @throws Exception
+     */
     @Test
     public void testSerializationDisableTimestamps() throws Exception
     {
@@ -241,6 +260,11 @@ public class InstantSerTest extends ModuleTestBase
         assertEquals("The value is not correct.", "{\"registered_at\":\"2015-01-03T22:27:27.000123456Z\"}", value);
     }
 
+    /**
+     * If we disable `WRITE_DATE_TIMESTAMPS_AS_NANOSECONDS`, by default milliseconds will be used. 
+     * 
+     * @throws Exception
+     */
     @Test
     public void testSerializationDisableNanoseconds() throws Exception
     {
@@ -260,6 +284,13 @@ public class InstantSerTest extends ModuleTestBase
         assertEquals("The decimals should be deprecated.", "{\"registered_at\":1420324047000}", value);
     }
 
+    /**
+     * Our solution is to specify a specific pattern ("noFraction"). 
+     * Then variable `_useFraction` will be set as false, resulting no fraction part. 
+     * This only works when `WRITE_DATE_TIMESTAMPS_AS_NANOSECONDS` is enabled (default). 
+     * 
+     * @throws Exception
+     */
     @Test
     public void testSerializationWithSpecificPattern() throws Exception
     {
@@ -279,6 +310,12 @@ public class InstantSerTest extends ModuleTestBase
         assertEquals("The decimals should be deprecated.", "{\"registered_at\":1420324047}", value);
     }
 
+    /**
+     * Just a comparison to former test case. 
+     * Without the pattern, the fraction part remains. 
+     * 
+     * @throws Exception
+     */
     @Test
     public void testSerializationWithoutSpecificPattern() throws Exception
     {

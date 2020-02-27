@@ -49,7 +49,9 @@ abstract class JSR310FormattedSerializerBase<T>
     protected final Boolean _useNanoseconds;
 
     /**
-     * Issue #116
+     * Flag that indicates that fraction part is used when numeric timestamp values
+     * are wrritten using nanosecond timestamps. This works when {@link #_useNanoseconds} 
+     * is true. 
      */
     protected final Boolean _useFraction;
 
@@ -155,6 +157,7 @@ abstract class JSR310FormattedSerializerBase<T>
             if (format.hasPattern()) {
                 final String pattern = format.getPattern();
                 final Locale locale = format.hasLocale() ? format.getLocale() : prov.getLocale();
+                // Issue #116: whether fraction part will be disabled
                 if (pattern.equals("noFraction")) {
                     useFraction = Boolean.FALSE;
                 } else {
