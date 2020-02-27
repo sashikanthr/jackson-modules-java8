@@ -150,6 +150,18 @@ Nour | 7 | 7 | 2 | 1 | 2.5 | 5 | 1 | 1 |
 Nour: I had some small problem with JAVA_HOME (it wasn't set up correctly). I had also an issue with maven, but once I installed mave 
 correctly and set up JAVA_Home correctly, the project compiled and the all the tests succeeded. 
 
+### Statement of Contributions
+
+#### Chang (@changf)
+
+#### Jacob (@jadlers)
+
+#### Johan (@ande9)
+
+#### Nour (@almajni)
+
+#### Sashikanth (@sraa)
+
 ## Overall experience
 
 *What are your main take-aways from this project? What did you learn?*
