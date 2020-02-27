@@ -142,7 +142,7 @@ Name | plenary discussions/meetings | discussions within parts of the group | re
 Chang | - | - | - | - | - | - | - | - |
 Jacob | - | - | - | - | - | - | - | - |
 Johan | 6 | 3 | 2 | 0.5 | 7 | 1 | 4 | 0.5 |
-Sashikanth | - | - | - | - | - | - | - | - |
+Sashikanth | 6 | 4 | 2 | 1 | 6 | 1 | 4 | 1 |
 Nour | 7 | 7 | 2 | 1 | 2.5 | 5 | 1 | 1 |
 
 *For setting up tools and libraries (step 4), enumerate all dependencies you took care of and where you spent your time, if that time exceeds 30 minutes.*
@@ -161,6 +161,9 @@ correctly and set up JAVA_Home correctly, the project compiled and the all the t
 #### Nour (@almajni)
 
 #### Sashikanth (@sraa)
+- Involved in discussions on the project.
+- Analysed the code and architecture to understand the issue.
+- Development and Unit Test for Duration Serializer class.
 
 ## Overall experience
 
@@ -169,5 +172,7 @@ correctly and set up JAVA_Home correctly, the project compiled and the all the t
 To understand a project and how everything works is very time consuming. Most of our time was spent trying to figure out how the code works even though we only focused on a small part of the code base. Another take-away was that it is still possible to work on an issue even if you dont have knowledge of the entire project. 
 
 *Optional (point 6): How would you put your work in context with best software engineering practice?*
+
+
 
 *Optional (point 7): Is there something special you want to mention here?*
