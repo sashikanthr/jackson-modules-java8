@@ -159,4 +159,36 @@ public class DurationSerTest extends ModuleTestBase
         assertEquals("The value is not correct.",
                 "[\"" + Duration.class.getName() + "\",\"" + duration.toString() + "\"]", value);
     }
+
+    @Test
+    public void testDurationSerializationWithoutFraction() throws Exception
+    {
+        ObjectMapper mapper = newMapperBuilder().enable(SerializationFeature.WRITE_DURATIONS_AS_TIMESTAMPS)
+                .disable(SerializationFeature.WRITE_DATE_TIMESTAMPS_AS_NANOSECONDS)
+                .enable(SerializationFeature.WRITE_TIMESTAMPS_WITHOUT_FRACTION)
+                .addMixIn(TemporalAmount.class, MockObjectConfiguration.class)
+                .build();
+        Duration duration = Duration.ofSeconds(13498L, 8374);
+        String value = mapper.writeValueAsString(duration);
+
+        assertNotNull("The value should not be null.", value);
+        assertEquals("The value is not correct.",
+                "[\"" + Duration.class.getName() + "\"," + duration.getSeconds() + "]", value);
+    }
+
+    @Test
+    public void testDurationSerializationWithFraction() throws Exception
+    {
+        ObjectMapper mapper = newMapperBuilder().enable(SerializationFeature.WRITE_DURATIONS_AS_TIMESTAMPS)
+                .enable(SerializationFeature.WRITE_DATE_TIMESTAMPS_AS_NANOSECONDS)
+                .disable(SerializationFeature.WRITE_TIMESTAMPS_WITHOUT_FRACTION)
+                .addMixIn(TemporalAmount.class, MockObjectConfiguration.class)
+                .build();
+        Duration duration = Duration.ofSeconds(13498L, 8374);
+        String value = mapper.writeValueAsString(duration);
+
+        assertNotNull("The value should not be null.", value);
+        assertEquals("The value is not correct.",
+                "[\"" + Duration.class.getName() + "\"," + duration.getSeconds()+".00000"+duration.getNano() + "]", value);
+    }
 }
