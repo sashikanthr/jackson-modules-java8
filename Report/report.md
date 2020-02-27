@@ -1,6 +1,12 @@
 # Report for assignment 4
 
-*This is a template for your report. You are free to modify it as needed. It is not required to use markdown for your report either, but the report has to be delivered in a standard, cross-platform format.*
+*This is a template for y
+
+
+
+
+
+report. You are free to modify it as needed. It is not required to use markdown for your report either, but the report has to be delivered in a standard, cross-platform format.*
 
 ## Project
 
@@ -192,6 +198,12 @@ To understand a project and how everything works is very time consuming. Most of
 
 *Optional (point 6): How would you put your work in context with best software engineering practice?*
 
+In SEMAT kernel's point of view, there are three discrete areas of concern when developing a software system: Customer, Solution and Endeavor, each with several Alphas representing the essential things to do. We'll take each one of Alphas from these three areas, combine with our work and analyze the benefits, drawbacks and limitations of our work. 
 
+Stakeholders are the people, groups and organizations that affect or are affected by the software system. Once we decide the issue we're going to put hands on, the stakeholders are identified. For this project, we have different groups of stakeholders. The most obvious one is the issue provider, who has the willing to make changes to the software system and might be the key stakeholder as well. Other stakeholders include the users of the software system, i.e. Jackson library in this project, which of course include us. The biggest drawback during our work is that we have merely no contact with any stakeholders, and the responsibilities of the stakeholders during our development is unclear, which means we didn't receive any assistance from any stakeholders. The only stakeholder we have contact is the repository administrator, who is responsible for evaluating our work and decide whether to accept our pull request. We're around `Involved` state right now, waiting feedbacks from stakeholders who are interested. 
+
+Requirements are what the software system must do to address. Conceived phase is finished by initiating a new issue, where the issue provider provides detailed information about the description, requirements, necessity of the issue. The purpose is agreed by setting the issue explictly a `new-feature` tag. Then it's our work to make the requirements more clear by creating demostrations and cases, and understand constraints by analyzing code. Since we only work on a little issue in the whole project, we can't provide essential characteristics of the new system. The requirements are then shared within the team to evalute its feasibility, and are testable using JUnit. We are now around `Addressed` state, waiting for acceptance. 
+
+Team is a group of people actively engaged in the development, and in this project it's clearly us. The mission for us is to address an issue in a proper way, which is quite clear. We have workload devided to each person, and we all accept and understand what we should do and how. We are all familiar with each other, which is helpful for communication. Unfortunately, we don't have explicit leadership. I think we work as a cohesive unit in an open and honest environment. We meet each other regularly, but the limitation is that we have rather ambiguous commitments each time, and no milestone is set. We are now at the end of `Performing` state and are available for other assignments. 
 
 *Optional (point 7): Is there something special you want to mention here?*
