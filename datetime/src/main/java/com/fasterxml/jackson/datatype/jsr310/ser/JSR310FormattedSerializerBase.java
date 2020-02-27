@@ -149,7 +149,7 @@ abstract class JSR310FormattedSerializerBase<T>
                 useTimestamp = (shape == JsonFormat.Shape.STRING) ? Boolean.FALSE : null;
             }
             DateTimeFormatter dtf = _formatter;
-            Boolean useFraction = Boolean.TRUE;
+            Boolean useFraction = null;
 
             // If not, do we have a pattern?
             if (format.hasPattern()) {
@@ -176,8 +176,9 @@ abstract class JSR310FormattedSerializerBase<T>
             }
             Boolean writeZoneId = format.getFeature(JsonFormat.Feature.WRITE_DATES_WITH_ZONE_ID);
             Boolean writeNanoseconds = format.getFeature(JsonFormat.Feature.WRITE_DATE_TIMESTAMPS_AS_NANOSECONDS);
-            if ((writeZoneId != null) || (writeNanoseconds != null) || (useFraction != null)) {
-                ser = ser.withFeatures(writeZoneId, writeNanoseconds, useFraction);
+            if (useFraction != null) ser = ser.withFeatures(writeZoneId, writeNanoseconds, useFraction);
+            else if ((writeZoneId != null) || (writeNanoseconds != null)) {
+                ser = ser.withFeatures(writeZoneId, writeNanoseconds);
             }
             return ser;
         }
