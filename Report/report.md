@@ -157,6 +157,9 @@ correctly and set up JAVA_Home correctly, the project compiled and the all the t
 #### Jacob (@jadlers)
 
 #### Johan (@ande9)
+- Involved in discussions on the project.
+- Analysed the code and architecture to understand the issue.
+- Worked on deserializing.
 
 #### Nour (@almajni)
 
