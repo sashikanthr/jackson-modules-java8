@@ -123,6 +123,7 @@ Sashikanth | - | - | - | - | - | - | - | - |
 Nour | 7 | 7 | 2 | 1 | 2.5 | 5 | 1 | 1 |
 
 *For setting up tools and libraries (step 4), enumerate all dependencies you took care of and where you spent your time, if that time exceeds 30 minutes.*
+
 Nour: I had some small problem with JAVA_HOME (it wasn't set up correctly). I had also an issue with maven, but once I installed mave 
 correctly and set up JAVA_Home correctly, the project compiled and the all the tests succeeded. 
 
