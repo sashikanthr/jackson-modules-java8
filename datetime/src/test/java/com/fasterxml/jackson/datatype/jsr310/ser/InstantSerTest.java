@@ -193,7 +193,7 @@ public class InstantSerTest extends ModuleTestBase
         String value = MAPPER.writer()
         .without(SerializationFeature.WRITE_DATES_AS_TIMESTAMPS)
         .writeValueAsString(new TempClass(1420324047, 123456));
-        assertEquals("The decimals should be deprecated.", "{\"registered_at\":1420324047.000123456}", value);
+        assertEquals("The decimals should be deprecated.", "{\"registered_at\":1420324047}", value);
     }
 
     @Test
