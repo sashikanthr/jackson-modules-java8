@@ -141,7 +141,7 @@ Name | plenary discussions/meetings | discussions within parts of the group | re
 -----|--------------------------------|-----------------------------------------|-------------------------|---------------------------|-----------------------|-------------------------|---------------|---------
 Chang | - | - | - | - | - | - | - | - |
 Jacob | - | - | - | - | - | - | - | - |
-Johan | - | - | - | - | - | - | - | - |
+Johan | 6 | 3 | 2 | 0.5 | 7 | 1 | 4 | 0.5 |
 Sashikanth | - | - | - | - | - | - | - | - |
 Nour | 7 | 7 | 2 | 1 | 2.5 | 5 | 1 | 1 |
 
@@ -153,6 +153,8 @@ correctly and set up JAVA_Home correctly, the project compiled and the all the t
 ## Overall experience
 
 *What are your main take-aways from this project? What did you learn?*
+
+To understand a project and how everything works is very time consuming. Most of our time was spent trying to figure out how the code works even though we only focused on a small part of the code base. Another take-away was that it is still possible to work on an issue even if you dont have knowledge of the entire project. 
 
 *Optional (point 6): How would you put your work in context with best software engineering practice?*
 
