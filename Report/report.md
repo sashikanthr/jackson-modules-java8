@@ -82,9 +82,17 @@ When serializing an `Instant` timestamp, which is known to be full seconds, a nu
 
 The requirements for the solution of this issue are the following:
 
-* Addition of a new flag should not break any existing tests, i.e. leaving the functionality as it is
-* Setting the flag with a mapper serializes (timestamps?) without a fraction part
-* Deserializing an earlier serialized value which had the flag set should get the same value back, given that the fraction is zero.
+#### Requirement 1
+
+* ID: issue/#116-requirement1
+* Title: Addition of a new flag to deal with fraction part
+* Desciption: Addition of a new flag and set the flag with a mapper serializes without a fraction part. The flag is defined in SerializationFeture in Jackson bind, and used when building the ObjectMapper. With this feature set, the fraction part of a number will be ignored when doing serialization. 
+
+#### Requirement 2
+
+* ID: issue/#116-requirement2
+* Title: Original test cases still passes
+* Desciption: It should not break any existing tests, i.e. leaving the functionality as it is. Ensure all test cases pass after begin refactored. 
 
 ### Structure of the issue
 
