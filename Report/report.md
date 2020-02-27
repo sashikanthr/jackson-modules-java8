@@ -108,6 +108,21 @@ This is the structure of the issue after we addressed it.
 
 *Optional (point 4): the patch is clean.*
 
+Both our solutions are clean in terms of code structure as well as output cleanness. 
+
+Solution 1 uses variable `_seFraction` as a flag, pretty much like the variable `_useNanoseconds`, 
+which brings high complexity into the code. It works well on all test cases, but to some extent 
+it increases complexity and reduce the readability. 
+
+Solution 2 does some modification on jackson bind package. It defines a serialization feature 
+called `WRITE_TIMESTAMP_WITHOUT_FRACTION` in place of a single flag, which is likely to be 
+a more formal way to address this issue because it integrates much bette within the structure of jackson. 
+This solutions involves less class in the modification, making it eaiser to analyze, maintain and use. 
+
+As for test cases, we add new test cases illustrating what the issue is, when it arises, why it arises and 
+how it can be addressed. Some test cases are mainly for better understanding and may be removed in 
+future patch. 
+
 *Optional (point 5): considered for acceptance (passes all automated checks).*
 
 ## Effort spent
