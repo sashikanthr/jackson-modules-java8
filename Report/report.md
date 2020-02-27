@@ -80,6 +80,11 @@ However, as written in the requirements below, we need to fix things in the corr
 
 When serializing an `Instant` timestamp, which is known to be full seconds, a number of zeroes are appended to the end. An option to disable writing any decimal part when serializing should be added.
 
+The structure of the issue is represented as follows.
+
+![issue-structure-before](<issue-structure-before.png>)
+![issue-structure-after](<issue-structure-after.png>)
+
 ### Requirements affected by functionality being refactored
 
 *Optional (point 3): trace tests to requirements.*
