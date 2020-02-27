@@ -75,10 +75,6 @@ However, as written in the requirements below, we need to fix things in the corr
 
 When serializing an `Instant` timestamp, which is known to be full seconds, a number of zeroes are appended to the end. An option to disable writing any decimal part when serializing should be added.
 
-The structure of the issue is represented as follows.
-
-![issue-structure-before](<issue-structure-before.png>)
-![issue-structure-after](<issue-structure-after.png>)
 
 ### Requirements affected by functionality being refactored
 
@@ -89,6 +85,16 @@ The requirements for the solution of this issue are the following:
 * Addition of a new flag should not break any existing tests, i.e. leaving the functionality as it is
 * Setting the flag with a mapper serializes (timestamps?) without a fraction part
 * Deserializing an earlier serialized value which had the flag set should get the same value back, given that the fraction is zero.
+
+### Structure of the issue
+
+The structure of the issue is represented as follows.
+
+![issue-structure-before](<issue-structure-before.png>)
+
+This is the structure of the issue after we addressed it. 
+
+![issue-structure-after](<issue-structure-after.png>)
 
 ### Existing test cases relating to refactored code
 
