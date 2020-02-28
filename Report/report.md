@@ -143,14 +143,14 @@ future patch.
 | Jacob      | 6                              | 3                                     | 2                     | 4                       | 3                     | 1                     | 3            | 1            |
 | Johan      | 6                              | 3                                     | 2                     | 0.5                     | 7                     | 1                     | 4            | 0.5          |
 | Sashikanth | 6                              | 4                                     | 2                     | 1                       | 6                     | 1                     | 4            | 1            |
-| Nour       | 7                              | 7                                     | 2                     | 1                       | 2.5                   | 5                     | 1            | 1            |
+| Nour       | 6                              | 4                                     | 2                     | 1                       | 5                     | 4.5                     | 1            | 1.5            |
 
 *For setting up tools and libraries (step 4), enumerate all dependencies you took care of and where you spent your time, if that time exceeds 30 minutes.*
 
 - Nour: I had some small problem with JAVA_HOME (it wasn't set up correctly). I had also an issue with maven, but once I installed mave 
 correctly and set up JAVA_Home correctly, the project compiled and the all the tests succeeded. 
 
-- Jacob: All tests but one ran correctly on my main machine, took quite some time to try and understad what caused the issue. Did not fully get to the bottom of it in order to file an issue, but it seems like an issue with the java version used. Might look further into it later but I stopped since it was working fully on my secondary computer and to work on the issue instead of setup.
+- Jacob: All tests but one ran correctly on my main machine, took quite some time to try and understand what caused the issue. Did not fully get to the bottom of it in order to file an issue, but it seems like an issue with the java version used. Might look further into it later but I stopped since it was working fully on my secondary computer and to work on the issue instead of setup.
 
 
 ### Statement of Contributions
@@ -178,6 +178,9 @@ correctly and set up JAVA_Home correctly, the project compiled and the all the t
 - Worked on deserializing.
 
 #### Nour (@almajni)
+- Involved in discussions on the project.
+- Analysed the code and architecture to understand the issue.
+- Create the UML diagrams and analyse the whole structure of the repo
 
 #### Sashikanth (@sraa)
 - Involved in discussions on the project.
