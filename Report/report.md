@@ -96,13 +96,10 @@ The requirements for the solution of this issue are the following:
 
 ### Structure of the issue
 
-The structure of the issue is represented as follows.
+The structure of the issue is represented as follows. The dotted lines are what we added to solve the issue. 
 
-![issue-structure-before](<issue-structure-before.png>)
+![issue-structure](<issue-structure.png>)
 
-This is the structure of the issue after we addressed it. 
-
-![issue-structure-after](<issue-structure-after.png>)
 
 ### Existing test cases relating to refactored code
 
