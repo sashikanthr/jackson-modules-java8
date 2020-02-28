@@ -1,0 +1,250 @@
+[INFO] Scanning for projects...
+[INFO] Inspecting build with total of 4 modules...
+[INFO] Installing Nexus Staging features:
+[INFO]   ... total of 4 executions of maven-deploy-plugin replaced with nexus-staging-maven-plugin
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Build Order:
+[INFO] 
+[INFO] Jackson modules: Java 8                                            [pom]
+[INFO] Jackson-module-parameter-names                                  [bundle]
+[INFO] Jackson datatype: jdk8                                          [bundle]
+[INFO] Jackson datatype: JSR310                                        [bundle]
+[INFO] 
+[INFO] ---------< com.fasterxml.jackson.module:jackson-modules-java8 >---------
+[INFO] Building Jackson modules: Java 8 3.0.0-SNAPSHOT                    [1/4]
+[INFO] --------------------------------[ pom ]---------------------------------
+[INFO] 
+[INFO] --- maven-enforcer-plugin:3.0.0-M1:enforce (enforce-java) @ jackson-modules-java8 ---
+[INFO] 
+[INFO] --- build-helper-maven-plugin:1.7:add-source (add-generated-sources) @ jackson-modules-java8 ---
+[INFO] Source directory: /Users/jadlers/school/git/jackson-modules-java8/target/generated-sources added.
+[INFO] 
+[INFO] ----< com.fasterxml.jackson.module:jackson-module-parameter-names >-----
+[INFO] Building Jackson-module-parameter-names 3.0.0-SNAPSHOT             [2/4]
+[INFO] -------------------------------[ bundle ]-------------------------------
+[INFO] 
+[INFO] --- maven-enforcer-plugin:3.0.0-M1:enforce (enforce-java) @ jackson-module-parameter-names ---
+[INFO] 
+[INFO] --- build-helper-maven-plugin:1.7:add-source (add-generated-sources) @ jackson-module-parameter-names ---
+[INFO] Source directory: /Users/jadlers/school/git/jackson-modules-java8/parameter-names/target/generated-sources added.
+[INFO] 
+[INFO] --- replacer:1.5.3:replace (process-packageVersion) @ jackson-module-parameter-names ---
+[INFO] Replacement run on 1 file.
+[INFO] 
+[INFO] --- maven-resources-plugin:2.7:resources (default-resources) @ jackson-module-parameter-names ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 1 resource
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.0:compile (default-compile) @ jackson-module-parameter-names ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 2 source files to /Users/jadlers/school/git/jackson-modules-java8/parameter-names/target/classes
+[INFO] 
+[INFO] --- maven-resources-plugin:2.7:testResources (default-testResources) @ jackson-module-parameter-names ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /Users/jadlers/school/git/jackson-modules-java8/parameter-names/src/test/resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.0:testCompile (default-testCompile) @ jackson-module-parameter-names ---
+[INFO] No sources to compile
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.22.2:test (default-test) @ jackson-module-parameter-names ---
+[INFO] No tests to run.
+[INFO] 
+[INFO] --------< com.fasterxml.jackson.datatype:jackson-datatype-jdk8 >--------
+[INFO] Building Jackson datatype: jdk8 3.0.0-SNAPSHOT                     [3/4]
+[INFO] -------------------------------[ bundle ]-------------------------------
+[INFO] 
+[INFO] --- maven-enforcer-plugin:3.0.0-M1:enforce (enforce-java) @ jackson-datatype-jdk8 ---
+[INFO] 
+[INFO] --- build-helper-maven-plugin:1.7:add-source (add-generated-sources) @ jackson-datatype-jdk8 ---
+[INFO] Source directory: /Users/jadlers/school/git/jackson-modules-java8/datatypes/target/generated-sources added.
+[INFO] 
+[INFO] --- replacer:1.5.3:replace (process-packageVersion) @ jackson-datatype-jdk8 ---
+[INFO] Replacement run on 1 file.
+[INFO] 
+[INFO] --- maven-resources-plugin:2.7:resources (default-resources) @ jackson-datatype-jdk8 ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 1 resource
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.0:compile (default-compile) @ jackson-datatype-jdk8 ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 2 source files to /Users/jadlers/school/git/jackson-modules-java8/datatypes/target/classes
+[INFO] 
+[INFO] --- maven-resources-plugin:2.7:testResources (default-testResources) @ jackson-datatype-jdk8 ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /Users/jadlers/school/git/jackson-modules-java8/datatypes/src/test/resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.0:testCompile (default-testCompile) @ jackson-datatype-jdk8 ---
+[INFO] No sources to compile
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.22.2:test (default-test) @ jackson-datatype-jdk8 ---
+[INFO] No tests to run.
+[INFO] 
+[INFO] -------< com.fasterxml.jackson.datatype:jackson-datatype-jsr310 >-------
+[INFO] Building Jackson datatype: JSR310 3.0.0-SNAPSHOT                   [4/4]
+[INFO] -------------------------------[ bundle ]-------------------------------
+[INFO] 
+[INFO] --- maven-enforcer-plugin:3.0.0-M1:enforce (enforce-java) @ jackson-datatype-jsr310 ---
+[INFO] 
+[INFO] --- replacer:1.5.3:replace (process-packageVersion) @ jackson-datatype-jsr310 ---
+[INFO] Replacement run on 1 file.
+[INFO] 
+[INFO] --- build-helper-maven-plugin:1.7:add-source (add-generated-sources) @ jackson-datatype-jsr310 ---
+[INFO] Source directory: /Users/jadlers/school/git/jackson-modules-java8/datetime/target/generated-sources added.
+[INFO] 
+[INFO] --- maven-resources-plugin:2.7:resources (default-resources) @ jackson-datatype-jsr310 ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 2 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.0:compile (default-compile) @ jackson-datatype-jsr310 ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 46 source files to /Users/jadlers/school/git/jackson-modules-java8/datetime/target/classes
+[INFO] 
+[INFO] --- maven-resources-plugin:2.7:testResources (default-testResources) @ jackson-datatype-jsr310 ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /Users/jadlers/school/git/jackson-modules-java8/datetime/src/test/resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.0:testCompile (default-testCompile) @ jackson-datatype-jsr310 ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 62 source files to /Users/jadlers/school/git/jackson-modules-java8/datetime/target/test-classes
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.22.2:test (default-test) @ jackson-datatype-jsr310 ---
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running com.fasterxml.jackson.datatype.jsr310.misc.DateTimeSchemasTest
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.337 s - in com.fasterxml.jackson.datatype.jsr310.misc.DateTimeSchemasTest
+[INFO] Running com.fasterxml.jackson.datatype.jsr310.misc.JDKSerializabilityTest
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.075 s - in com.fasterxml.jackson.datatype.jsr310.misc.JDKSerializabilityTest
+[INFO] Running com.fasterxml.jackson.datatype.jsr310.TestFeatures
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.002 s - in com.fasterxml.jackson.datatype.jsr310.TestFeatures
+[INFO] Running com.fasterxml.jackson.datatype.jsr310.TestMonthDaySerialization
+[INFO] Tests run: 8, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.094 s - in com.fasterxml.jackson.datatype.jsr310.TestMonthDaySerialization
+[INFO] Running com.fasterxml.jackson.datatype.jsr310.TestZonedDateTimeSerialization
+[INFO] Tests run: 58, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.126 s - in com.fasterxml.jackson.datatype.jsr310.TestZonedDateTimeSerialization
+[INFO] Running com.fasterxml.jackson.datatype.jsr310.TestDecimalUtils
+[INFO] Tests run: 15, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.017 s - in com.fasterxml.jackson.datatype.jsr310.TestDecimalUtils
+[INFO] Running com.fasterxml.jackson.datatype.jsr310.deser.InstantDeserTest
+[INFO] Tests run: 36, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.094 s - in com.fasterxml.jackson.datatype.jsr310.deser.InstantDeserTest
+[INFO] Running com.fasterxml.jackson.datatype.jsr310.deser.YearMonthDeserTest
+[INFO] Tests run: 8, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.028 s - in com.fasterxml.jackson.datatype.jsr310.deser.YearMonthDeserTest
+[INFO] Running com.fasterxml.jackson.datatype.jsr310.deser.LocalDateTimeDeserTest
+[INFO] Tests run: 32, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.042 s - in com.fasterxml.jackson.datatype.jsr310.deser.LocalDateTimeDeserTest
+[INFO] Running com.fasterxml.jackson.datatype.jsr310.deser.ZoneIdDeserTest
+[INFO] Tests run: 8, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.014 s - in com.fasterxml.jackson.datatype.jsr310.deser.ZoneIdDeserTest
+[INFO] Running com.fasterxml.jackson.datatype.jsr310.deser.OffsetTimeDeserTest
+[INFO] Tests run: 19, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.031 s - in com.fasterxml.jackson.datatype.jsr310.deser.OffsetTimeDeserTest
+[INFO] Running com.fasterxml.jackson.datatype.jsr310.deser.LocalDateDeserTest
+[INFO] Tests run: 25, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.039 s - in com.fasterxml.jackson.datatype.jsr310.deser.LocalDateDeserTest
+[INFO] Running com.fasterxml.jackson.datatype.jsr310.deser.DefaultTypingTest
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.002 s - in com.fasterxml.jackson.datatype.jsr310.deser.DefaultTypingTest
+[INFO] Running com.fasterxml.jackson.datatype.jsr310.deser.ZonedDateTimeDeserTest
+[INFO] Tests run: 8, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.009 s - in com.fasterxml.jackson.datatype.jsr310.deser.ZonedDateTimeDeserTest
+[INFO] Running com.fasterxml.jackson.datatype.jsr310.deser.PeriodDeserTest
+[INFO] Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.005 s - in com.fasterxml.jackson.datatype.jsr310.deser.PeriodDeserTest
+[INFO] Running com.fasterxml.jackson.datatype.jsr310.deser.LocalTimeDeserTest
+[INFO] Tests run: 18, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.023 s - in com.fasterxml.jackson.datatype.jsr310.deser.LocalTimeDeserTest
+[INFO] Running com.fasterxml.jackson.datatype.jsr310.deser.MonthDayDeserTest
+[INFO] Tests run: 12, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.014 s - in com.fasterxml.jackson.datatype.jsr310.deser.MonthDayDeserTest
+[INFO] Running com.fasterxml.jackson.datatype.jsr310.deser.OffsetDateTimeDeserTest
+[INFO] Tests run: 40, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.044 s - in com.fasterxml.jackson.datatype.jsr310.deser.OffsetDateTimeDeserTest
+[INFO] Running com.fasterxml.jackson.datatype.jsr310.deser.DurationDeserTest
+[INFO] Tests run: 32, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.026 s - in com.fasterxml.jackson.datatype.jsr310.deser.DurationDeserTest
+[INFO] Running com.fasterxml.jackson.datatype.jsr310.deser.ZoneOffsetDeserTest
+[INFO] Tests run: 11, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.007 s - in com.fasterxml.jackson.datatype.jsr310.deser.ZoneOffsetDeserTest
+[INFO] Running com.fasterxml.jackson.datatype.jsr310.deser.YearDeserTest
+[INFO] Tests run: 12, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.022 s - in com.fasterxml.jackson.datatype.jsr310.deser.YearDeserTest
+[INFO] Running com.fasterxml.jackson.datatype.jsr310.key.LocalTimeAsKeyTest
+[INFO] Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.01 s - in com.fasterxml.jackson.datatype.jsr310.key.LocalTimeAsKeyTest
+[INFO] Running com.fasterxml.jackson.datatype.jsr310.key.MonthDayAsKeyTest
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.002 s - in com.fasterxml.jackson.datatype.jsr310.key.MonthDayAsKeyTest
+[INFO] Running com.fasterxml.jackson.datatype.jsr310.key.DurationAsKeyTest
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.002 s - in com.fasterxml.jackson.datatype.jsr310.key.DurationAsKeyTest
+[INFO] Running com.fasterxml.jackson.datatype.jsr310.key.OffsetDateTimeAsKeyTest
+[INFO] Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.011 s - in com.fasterxml.jackson.datatype.jsr310.key.OffsetDateTimeAsKeyTest
+[INFO] Running com.fasterxml.jackson.datatype.jsr310.key.ZoneOffsetAsKeyTest
+[INFO] Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.011 s - in com.fasterxml.jackson.datatype.jsr310.key.ZoneOffsetAsKeyTest
+[INFO] Running com.fasterxml.jackson.datatype.jsr310.key.YearAsKeyTest
+[INFO] Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.009 s - in com.fasterxml.jackson.datatype.jsr310.key.YearAsKeyTest
+[INFO] Running com.fasterxml.jackson.datatype.jsr310.key.InstantAsKeyTest
+[INFO] Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.006 s - in com.fasterxml.jackson.datatype.jsr310.key.InstantAsKeyTest
+[INFO] Running com.fasterxml.jackson.datatype.jsr310.key.YearMonthAsKeyTest
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.009 s - in com.fasterxml.jackson.datatype.jsr310.key.YearMonthAsKeyTest
+[INFO] Running com.fasterxml.jackson.datatype.jsr310.key.LocalDateTimeAsKeyTest
+[INFO] Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.011 s - in com.fasterxml.jackson.datatype.jsr310.key.LocalDateTimeAsKeyTest
+[INFO] Running com.fasterxml.jackson.datatype.jsr310.key.ZoneIdAsKeyTest
+[INFO] Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.008 s - in com.fasterxml.jackson.datatype.jsr310.key.ZoneIdAsKeyTest
+[INFO] Running com.fasterxml.jackson.datatype.jsr310.key.LocalDateAsKeyTest
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.002 s - in com.fasterxml.jackson.datatype.jsr310.key.LocalDateAsKeyTest
+[INFO] Running com.fasterxml.jackson.datatype.jsr310.key.OffsetTimeAsKeyTest
+[INFO] Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.005 s - in com.fasterxml.jackson.datatype.jsr310.key.OffsetTimeAsKeyTest
+[INFO] Running com.fasterxml.jackson.datatype.jsr310.key.ZonedDateTimeAsKeyTest
+[INFO] Tests run: 8, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.014 s - in com.fasterxml.jackson.datatype.jsr310.key.ZonedDateTimeAsKeyTest
+[INFO] Running com.fasterxml.jackson.datatype.jsr310.key.PeriodAsKeyTest
+[INFO] Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.015 s - in com.fasterxml.jackson.datatype.jsr310.key.PeriodAsKeyTest
+[INFO] Running com.fasterxml.jackson.datatype.jsr310.TestYearDeserialization
+[INFO] Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.012 s - in com.fasterxml.jackson.datatype.jsr310.TestYearDeserialization
+[INFO] Running com.fasterxml.jackson.datatype.jsr310.TestPeriodSerialization
+[INFO] Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.024 s - in com.fasterxml.jackson.datatype.jsr310.TestPeriodSerialization
+[INFO] Running com.fasterxml.jackson.datatype.jsr310.ser.PeriodSerTest
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.002 s - in com.fasterxml.jackson.datatype.jsr310.ser.PeriodSerTest
+[INFO] Running com.fasterxml.jackson.datatype.jsr310.ser.TestLocalDateTimeSerializationWithCustomFormatter
+[INFO] Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.018 s - in com.fasterxml.jackson.datatype.jsr310.ser.TestLocalDateTimeSerializationWithCustomFormatter
+[INFO] Running com.fasterxml.jackson.datatype.jsr310.ser.LocalTimeSerTest
+[INFO] Tests run: 13, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.011 s - in com.fasterxml.jackson.datatype.jsr310.ser.LocalTimeSerTest
+[INFO] Running com.fasterxml.jackson.datatype.jsr310.ser.ZoneIdSerTest
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.002 s - in com.fasterxml.jackson.datatype.jsr310.ser.ZoneIdSerTest
+[INFO] Running com.fasterxml.jackson.datatype.jsr310.ser.WriteZoneIdTest
+[INFO] Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.003 s - in com.fasterxml.jackson.datatype.jsr310.ser.WriteZoneIdTest
+[INFO] Running com.fasterxml.jackson.datatype.jsr310.ser.OffsetDateTimeSerTest
+[INFO] Tests run: 12, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.007 s - in com.fasterxml.jackson.datatype.jsr310.ser.OffsetDateTimeSerTest
+[INFO] Running com.fasterxml.jackson.datatype.jsr310.ser.TestLocalDateSerializationWithCustomFormatter
+[INFO] Tests run: 12, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.009 s - in com.fasterxml.jackson.datatype.jsr310.ser.TestLocalDateSerializationWithCustomFormatter
+[INFO] Running com.fasterxml.jackson.datatype.jsr310.ser.TestLocalTimeSerializationWithCustomFormatter
+[INFO] Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.002 s - in com.fasterxml.jackson.datatype.jsr310.ser.TestLocalTimeSerializationWithCustomFormatter
+[INFO] Running com.fasterxml.jackson.datatype.jsr310.ser.TestYearSerializationWithCustomFormatter
+[INFO] Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.005 s - in com.fasterxml.jackson.datatype.jsr310.ser.TestYearSerializationWithCustomFormatter
+[INFO] Running com.fasterxml.jackson.datatype.jsr310.ser.YearMonthSerializationTest
+[INFO] Tests run: 12, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.021 s - in com.fasterxml.jackson.datatype.jsr310.ser.YearMonthSerializationTest
+[INFO] Running com.fasterxml.jackson.datatype.jsr310.ser.LocalDateSerTest
+[INFO] Tests run: 9, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.016 s - in com.fasterxml.jackson.datatype.jsr310.ser.LocalDateSerTest
+[INFO] Running com.fasterxml.jackson.datatype.jsr310.ser.MonthDaySerTest
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.002 s - in com.fasterxml.jackson.datatype.jsr310.ser.MonthDaySerTest
+[INFO] Running com.fasterxml.jackson.datatype.jsr310.ser.ZoneOffsetSerTest
+[INFO] Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 s - in com.fasterxml.jackson.datatype.jsr310.ser.ZoneOffsetSerTest
+[INFO] Running com.fasterxml.jackson.datatype.jsr310.ser.TestYearMonthSerializationWithCustomFormatter
+[INFO] Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.002 s - in com.fasterxml.jackson.datatype.jsr310.ser.TestYearMonthSerializationWithCustomFormatter
+[INFO] Running com.fasterxml.jackson.datatype.jsr310.ser.InstantSerTest
+[INFO] Tests run: 12, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.006 s - in com.fasterxml.jackson.datatype.jsr310.ser.InstantSerTest
+[INFO] Running com.fasterxml.jackson.datatype.jsr310.ser.OffsetTimeSerTest
+[INFO] Tests run: 12, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.006 s - in com.fasterxml.jackson.datatype.jsr310.ser.OffsetTimeSerTest
+[INFO] Running com.fasterxml.jackson.datatype.jsr310.ser.TestZonedDateTimeSerializationWithCustomFormatter
+[INFO] Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.003 s - in com.fasterxml.jackson.datatype.jsr310.ser.TestZonedDateTimeSerializationWithCustomFormatter
+[INFO] Running com.fasterxml.jackson.datatype.jsr310.ser.WriteNanosecondsTest
+[INFO] Tests run: 7, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.006 s - in com.fasterxml.jackson.datatype.jsr310.ser.WriteNanosecondsTest
+[INFO] Running com.fasterxml.jackson.datatype.jsr310.ser.DurationSerTest
+[INFO] Tests run: 10, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.002 s - in com.fasterxml.jackson.datatype.jsr310.ser.DurationSerTest
+[INFO] Running com.fasterxml.jackson.datatype.jsr310.ser.LocalDateTimeSerTest
+[INFO] Tests run: 12, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.011 s - in com.fasterxml.jackson.datatype.jsr310.ser.LocalDateTimeSerTest
+[INFO] Running com.fasterxml.jackson.datatype.jsr310.ser.YearSerTest
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.002 s - in com.fasterxml.jackson.datatype.jsr310.ser.YearSerTest
+[INFO] Running com.fasterxml.jackson.datatype.jsr310.TestOffsetDateTimeDeserialization
+[INFO] Tests run: 14, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.009 s - in com.fasterxml.jackson.datatype.jsr310.TestOffsetDateTimeDeserialization
+[INFO] 
+[INFO] Results:
+[INFO] 
+[INFO] Tests run: 593, Failures: 0, Errors: 0, Skipped: 0
+[INFO] 
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Summary for Jackson modules: Java 8 3.0.0-SNAPSHOT:
+[INFO] 
+[INFO] Jackson modules: Java 8 ............................ SUCCESS [  0.509 s]
+[INFO] Jackson-module-parameter-names ..................... SUCCESS [  1.064 s]
+[INFO] Jackson datatype: jdk8 ............................. SUCCESS [  0.117 s]
+[INFO] Jackson datatype: JSR310 ........................... SUCCESS [  6.098 s]
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  9.730 s
+[INFO] Finished at: 2020-02-26T08:21:47+01:00
+[INFO] ------------------------------------------------------------------------

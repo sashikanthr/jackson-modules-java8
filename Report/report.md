@@ -110,6 +110,9 @@ This is the structure of the issue after we addressed it.
 
 *Overall results with link to a copy or excerpt of the logs (before/after refactoring).*
 
+- [tests-original.log](./tests-original.log)
+- [tests-updated.log](./tests-updated.log)
+
 ### Patch/fix
 
 *The fix can be copied or linked to (git diff).*

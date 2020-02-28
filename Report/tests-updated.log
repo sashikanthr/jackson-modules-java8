@@ -1,0 +1,1257 @@
+[INFO] Scanning for projects...
+[INFO] Inspecting build with total of 6 modules...
+[INFO] Installing Nexus Staging features:
+[INFO]   ... total of 5 executions of maven-deploy-plugin replaced with nexus-staging-maven-plugin
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Build Order:
+[INFO] 
+[INFO] jackson-databind                                                [bundle]
+[INFO] Jackson modules: Java 8                                            [pom]
+[INFO] Jackson-module-parameter-names                                  [bundle]
+[INFO] Jackson datatype: jdk8                                          [bundle]
+[INFO] Jackson datatype: JSR310                                        [bundle]
+[INFO] jackson-base                                                       [pom]
+[INFO] 
+[INFO] ------------< com.fasterxml.jackson.core:jackson-databind >-------------
+[INFO] Building jackson-databind 3.0.0-SNAPSHOT                           [1/6]
+[INFO] -------------------------------[ bundle ]-------------------------------
+[WARNING] The artifact javax.measure:jsr-275:jar:1.0.0 has been relocated to javax.measure:jsr-275:jar:0.9.1
+[INFO] 
+[INFO] --- maven-enforcer-plugin:3.0.0-M1:enforce (enforce-java) @ jackson-databind ---
+[INFO] 
+[INFO] --- jacoco-maven-plugin:0.8.4:prepare-agent (default) @ jackson-databind ---
+[INFO] argLine set to -javaagent:/Users/jadlers/.m2/repository/org/jacoco/org.jacoco.agent/0.8.4/org.jacoco.agent-0.8.4-runtime.jar=destfile=/Users/jadlers/school/git/jackson-parent/jackson-databind/target/jacoco.exec
+[INFO] 
+[INFO] --- replacer:1.5.3:replace (process-packageVersion) @ jackson-databind ---
+[INFO] Replacement run on 1 file.
+[INFO] 
+[INFO] --- build-helper-maven-plugin:1.7:add-source (add-generated-sources) @ jackson-databind ---
+[INFO] Source directory: /Users/jadlers/school/git/jackson-parent/jackson-databind/target/generated-sources added.
+[INFO] 
+[INFO] --- maven-resources-plugin:2.7:resources (default-resources) @ jackson-databind ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 3 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.0:compile (default-compile) @ jackson-databind ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 442 source files to /Users/jadlers/school/git/jackson-parent/jackson-databind/target/classes
+[WARNING] /Users/jadlers/school/git/jackson-parent/jackson-databind/src/main/java/com/fasterxml/jackson/databind/ser/PropertyBuilder.java:[217,63] WRITE_EMPTY_JSON_ARRAYS in com.fasterxml.jackson.databind.SerializationFeature has been deprecated
+[WARNING] /Users/jadlers/school/git/jackson-parent/jackson-databind/src/main/java/com/fasterxml/jackson/databind/introspect/POJOPropertyBuilder.java:[878,39] getAllAnnotations() in com.fasterxml.jackson.databind.introspect.AnnotatedMember has been deprecated
+[INFO] /Users/jadlers/school/git/jackson-parent/jackson-databind/src/main/java/com/fasterxml/jackson/databind/DeserializationContext.java: Some input files use unchecked or unsafe operations.
+[INFO] /Users/jadlers/school/git/jackson-parent/jackson-databind/src/main/java/com/fasterxml/jackson/databind/DeserializationContext.java: Recompile with -Xlint:unchecked for details.
+[INFO] 
+[INFO] --- maven-resources-plugin:2.7:testResources (default-testResources) @ jackson-databind ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 2 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.0:testCompile (default-testCompile) @ jackson-databind ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 547 source files to /Users/jadlers/school/git/jackson-parent/jackson-databind/target/test-classes
+[INFO] /Users/jadlers/school/git/jackson-parent/jackson-databind/src/test/java/com/fasterxml/jackson/databind/BaseMapTest.java: Some input files use unchecked or unsafe operations.
+[INFO] /Users/jadlers/school/git/jackson-parent/jackson-databind/src/test/java/com/fasterxml/jackson/databind/BaseMapTest.java: Recompile with -Xlint:unchecked for details.
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.22.2:test (default-test) @ jackson-databind ---
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running com.fasterxml.jackson.databind.misc.TestJSONP
+[INFO] Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.017 s - in com.fasterxml.jackson.databind.misc.TestJSONP
+[INFO] Running com.fasterxml.jackson.databind.misc.RaceCondition738Test
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 4.908 s - in com.fasterxml.jackson.databind.misc.RaceCondition738Test
+[INFO] Running com.fasterxml.jackson.databind.misc.CaseInsensitiveDeser953Test
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.027 s - in com.fasterxml.jackson.databind.misc.CaseInsensitiveDeser953Test
+[INFO] Running com.fasterxml.jackson.databind.misc.TestBlocking
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.002 s - in com.fasterxml.jackson.databind.misc.TestBlocking
+[INFO] Running com.fasterxml.jackson.databind.misc.AccessFixTest
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.037 s - in com.fasterxml.jackson.databind.misc.AccessFixTest
+[INFO] Running com.fasterxml.jackson.databind.misc.ThreadSafety1759Test
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.14 s - in com.fasterxml.jackson.databind.misc.ThreadSafety1759Test
+[INFO] Running com.fasterxml.jackson.databind.misc.CaseInsensitiveDeserTest
+[INFO] Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.031 s - in com.fasterxml.jackson.databind.misc.CaseInsensitiveDeserTest
+[INFO] Running com.fasterxml.jackson.databind.misc.ParsingContext2525Test
+[INFO] Tests run: 7, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.017 s - in com.fasterxml.jackson.databind.misc.ParsingContext2525Test
+[INFO] Running com.fasterxml.jackson.databind.ObjectReaderTest
+[INFO] Tests run: 18, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.043 s - in com.fasterxml.jackson.databind.ObjectReaderTest
+[INFO] Running com.fasterxml.jackson.databind.big.TestBiggerData
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.37 s - in com.fasterxml.jackson.databind.big.TestBiggerData
+[INFO] Running com.fasterxml.jackson.databind.access.TestAnyGetterAccess
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.014 s - in com.fasterxml.jackson.databind.access.TestAnyGetterAccess
+[INFO] Running com.fasterxml.jackson.databind.util.CompactStringObjectMapTest
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.011 s - in com.fasterxml.jackson.databind.util.CompactStringObjectMapTest
+[INFO] Running com.fasterxml.jackson.databind.util.ArrayBuildersTest
+[INFO] Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.008 s - in com.fasterxml.jackson.databind.util.ArrayBuildersTest
+[INFO] Running com.fasterxml.jackson.databind.util.EnumValuesTest
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.002 s - in com.fasterxml.jackson.databind.util.EnumValuesTest
+[INFO] Running com.fasterxml.jackson.databind.util.ClassUtilTest
+[INFO] Tests run: 13, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.021 s - in com.fasterxml.jackson.databind.util.ClassUtilTest
+[INFO] Running com.fasterxml.jackson.databind.util.RawValueTest
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.004 s - in com.fasterxml.jackson.databind.util.RawValueTest
+[INFO] Running com.fasterxml.jackson.databind.util.JSONPObjectTest
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.002 s - in com.fasterxml.jackson.databind.util.JSONPObjectTest
+[INFO] Running com.fasterxml.jackson.databind.util.BeanUtilTest
+[INFO] Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.01 s - in com.fasterxml.jackson.databind.util.BeanUtilTest
+[INFO] Running com.fasterxml.jackson.databind.util.NameTransformerTest
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.016 s - in com.fasterxml.jackson.databind.util.NameTransformerTest
+[INFO] Running com.fasterxml.jackson.databind.util.TestTokenBuffer
+[INFO] Tests run: 18, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.018 s - in com.fasterxml.jackson.databind.util.TestTokenBuffer
+[INFO] Running com.fasterxml.jackson.databind.util.TestStdDateFormat
+[INFO] Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.009 s - in com.fasterxml.jackson.databind.util.TestStdDateFormat
+[INFO] Running com.fasterxml.jackson.databind.util.JsonParserSequenceTest
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.006 s - in com.fasterxml.jackson.databind.util.JsonParserSequenceTest
+[INFO] Running com.fasterxml.jackson.databind.util.ByteBufferUtilsTest
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.003 s - in com.fasterxml.jackson.databind.util.ByteBufferUtilsTest
+[INFO] Running com.fasterxml.jackson.databind.util.TestObjectBuffer
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.066 s - in com.fasterxml.jackson.databind.util.TestObjectBuffer
+[INFO] Running com.fasterxml.jackson.databind.introspect.TestNamingStrategyStd
+[INFO] Tests run: 15, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.043 s - in com.fasterxml.jackson.databind.introspect.TestNamingStrategyStd
+[INFO] Running com.fasterxml.jackson.databind.introspect.IntrospectorPairTest
+[INFO] Tests run: 19, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.014 s - in com.fasterxml.jackson.databind.introspect.IntrospectorPairTest
+[INFO] Running com.fasterxml.jackson.databind.introspect.IgnoredCreatorProperty1572Test
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.005 s - in com.fasterxml.jackson.databind.introspect.IgnoredCreatorProperty1572Test
+[INFO] Running com.fasterxml.jackson.databind.introspect.TestScalaLikeImplicitProperties
+[INFO] Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.009 s - in com.fasterxml.jackson.databind.introspect.TestScalaLikeImplicitProperties
+[INFO] Running com.fasterxml.jackson.databind.introspect.SetterConflictTest
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.004 s - in com.fasterxml.jackson.databind.introspect.SetterConflictTest
+[INFO] Running com.fasterxml.jackson.databind.introspect.TestPropertyConflicts
+[INFO] Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.008 s - in com.fasterxml.jackson.databind.introspect.TestPropertyConflicts
+[INFO] Running com.fasterxml.jackson.databind.introspect.CustomAnnotationIntrospector1756Test
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.012 s - in com.fasterxml.jackson.databind.introspect.CustomAnnotationIntrospector1756Test
+[INFO] Running com.fasterxml.jackson.databind.introspect.TestInferredMutators
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.003 s - in com.fasterxml.jackson.databind.introspect.TestInferredMutators
+[INFO] Running com.fasterxml.jackson.databind.introspect.TestNameConflicts
+[INFO] Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.008 s - in com.fasterxml.jackson.databind.introspect.TestNameConflicts
+[INFO] Running com.fasterxml.jackson.databind.introspect.TestAnnotationBundles
+[INFO] Tests run: 7, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.011 s - in com.fasterxml.jackson.databind.introspect.TestAnnotationBundles
+[INFO] Running com.fasterxml.jackson.databind.introspect.POJOPropertiesCollectorTest
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.021 s - in com.fasterxml.jackson.databind.introspect.POJOPropertiesCollectorTest
+[INFO] Running com.fasterxml.jackson.databind.introspect.TestAnnotationMerging
+[INFO] Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.011 s - in com.fasterxml.jackson.databind.introspect.TestAnnotationMerging
+[INFO] Running com.fasterxml.jackson.databind.introspect.TransientTest
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.012 s - in com.fasterxml.jackson.databind.introspect.TransientTest
+[INFO] Running com.fasterxml.jackson.databind.introspect.TestJacksonAnnotationIntrospector
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.006 s - in com.fasterxml.jackson.databind.introspect.TestJacksonAnnotationIntrospector
+[INFO] Running com.fasterxml.jackson.databind.introspect.NoClassDefFoundWorkaroundTest
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.012 s - in com.fasterxml.jackson.databind.introspect.NoClassDefFoundWorkaroundTest
+[INFO] Running com.fasterxml.jackson.databind.introspect.TestNamingStrategyCustom
+[INFO] Tests run: 7, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.013 s - in com.fasterxml.jackson.databind.introspect.TestNamingStrategyCustom
+[INFO] Running com.fasterxml.jackson.databind.introspect.TypeCoercion1592Test
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.005 s - in com.fasterxml.jackson.databind.introspect.TypeCoercion1592Test
+[INFO] Running com.fasterxml.jackson.databind.introspect.IgnoredFieldPresentInCreatorProperty2001Test
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.015 s - in com.fasterxml.jackson.databind.introspect.IgnoredFieldPresentInCreatorProperty2001Test
+[INFO] Running com.fasterxml.jackson.databind.introspect.BeanNamingTest
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.007 s - in com.fasterxml.jackson.databind.introspect.BeanNamingTest
+[INFO] Running com.fasterxml.jackson.databind.introspect.VisibilityForSerializationTest
+[INFO] Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.02 s - in com.fasterxml.jackson.databind.introspect.VisibilityForSerializationTest
+[INFO] Running com.fasterxml.jackson.databind.introspect.BeanDescriptionTest
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.005 s - in com.fasterxml.jackson.databind.introspect.BeanDescriptionTest
+[INFO] Running com.fasterxml.jackson.databind.introspect.TestPropertyRename
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.004 s - in com.fasterxml.jackson.databind.introspect.TestPropertyRename
+[INFO] Running com.fasterxml.jackson.databind.introspect.PropertyMetadataTest
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.005 s - in com.fasterxml.jackson.databind.introspect.PropertyMetadataTest
+[INFO] Running com.fasterxml.jackson.databind.introspect.TestAutoDetect
+[INFO] Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.011 s - in com.fasterxml.jackson.databind.introspect.TestAutoDetect
+[INFO] Running com.fasterxml.jackson.databind.mixins.TestMixinMerging
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.003 s - in com.fasterxml.jackson.databind.mixins.TestMixinMerging
+[INFO] Running com.fasterxml.jackson.databind.mixins.TestMixinDeserForClass
+[INFO] Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.011 s - in com.fasterxml.jackson.databind.mixins.TestMixinDeserForClass
+[INFO] Running com.fasterxml.jackson.databind.mixins.TestMixinSerForMethods
+[INFO] Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.008 s - in com.fasterxml.jackson.databind.mixins.TestMixinSerForMethods
+[INFO] Running com.fasterxml.jackson.databind.mixins.TestMixinDeserForCreators
+[INFO] Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.009 s - in com.fasterxml.jackson.databind.mixins.TestMixinDeserForCreators
+[INFO] Running com.fasterxml.jackson.databind.mixins.TestMixinSerForClass
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.009 s - in com.fasterxml.jackson.databind.mixins.TestMixinSerForClass
+[INFO] Running com.fasterxml.jackson.databind.mixins.TestMixinSerWithViews
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.013 s - in com.fasterxml.jackson.databind.mixins.TestMixinSerWithViews
+[INFO] Running com.fasterxml.jackson.databind.mixins.MixinsWithBundlesTest
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.013 s - in com.fasterxml.jackson.databind.mixins.MixinsWithBundlesTest
+[INFO] Running com.fasterxml.jackson.databind.mixins.MapperMixinsCopy1998Test
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.022 s - in com.fasterxml.jackson.databind.mixins.MapperMixinsCopy1998Test
+[INFO] Running com.fasterxml.jackson.databind.mixins.TestMixinSerForFields
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.007 s - in com.fasterxml.jackson.databind.mixins.TestMixinSerForFields
+[INFO] Running com.fasterxml.jackson.databind.mixins.TestMixinDeserForMethods
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.002 s - in com.fasterxml.jackson.databind.mixins.TestMixinDeserForMethods
+[INFO] Running com.fasterxml.jackson.databind.mixins.TestMixinInheritance
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.017 s - in com.fasterxml.jackson.databind.mixins.TestMixinInheritance
+[INFO] Running com.fasterxml.jackson.databind.objectid.ObjectId687Test
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.05 s - in com.fasterxml.jackson.databind.objectid.ObjectId687Test
+[INFO] Running com.fasterxml.jackson.databind.objectid.ObjectId825Test
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.026 s - in com.fasterxml.jackson.databind.objectid.ObjectId825Test
+[INFO] Running com.fasterxml.jackson.databind.objectid.AlwaysAsReferenceFirstTest
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.026 s - in com.fasterxml.jackson.databind.objectid.AlwaysAsReferenceFirstTest
+[INFO] Running com.fasterxml.jackson.databind.objectid.ObjectId825BTest
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.061 s - in com.fasterxml.jackson.databind.objectid.ObjectId825BTest
+[INFO] Running com.fasterxml.jackson.databind.objectid.JSOGDeserialize622Test
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.02 s - in com.fasterxml.jackson.databind.objectid.JSOGDeserialize622Test
+[INFO] Running com.fasterxml.jackson.databind.objectid.TestObjectIdWithPolymorphic
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.012 s - in com.fasterxml.jackson.databind.objectid.TestObjectIdWithPolymorphic
+[INFO] Running com.fasterxml.jackson.databind.objectid.ObjectWithCreator1261Test
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.016 s - in com.fasterxml.jackson.databind.objectid.ObjectWithCreator1261Test
+[INFO] Running com.fasterxml.jackson.databind.objectid.ReferentialWithObjectIdTest
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.022 s - in com.fasterxml.jackson.databind.objectid.ReferentialWithObjectIdTest
+[INFO] Running com.fasterxml.jackson.databind.objectid.TestAbstractWithObjectId
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.006 s - in com.fasterxml.jackson.databind.objectid.TestAbstractWithObjectId
+[INFO] Running com.fasterxml.jackson.databind.objectid.TestObjectIdWithEquals
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.008 s - in com.fasterxml.jackson.databind.objectid.TestObjectIdWithEquals
+[INFO] Running com.fasterxml.jackson.databind.objectid.TestObjectId
+[INFO] Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.013 s - in com.fasterxml.jackson.databind.objectid.TestObjectId
+[INFO] Running com.fasterxml.jackson.databind.objectid.TestObjectIdDeserialization
+[INFO] Tests run: 17, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.048 s - in com.fasterxml.jackson.databind.objectid.TestObjectIdDeserialization
+[INFO] Running com.fasterxml.jackson.databind.objectid.ObjectIdReordering1388Test
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.008 s - in com.fasterxml.jackson.databind.objectid.ObjectIdReordering1388Test
+[INFO] Running com.fasterxml.jackson.databind.objectid.PolymorphicWithObjectId1551Test
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.01 s - in com.fasterxml.jackson.databind.objectid.PolymorphicWithObjectId1551Test
+[INFO] Running com.fasterxml.jackson.databind.objectid.TestObjectIdSerialization
+[INFO] Tests run: 10, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.013 s - in com.fasterxml.jackson.databind.objectid.TestObjectIdSerialization
+[INFO] Running com.fasterxml.jackson.databind.MapperJDKSerializationTest
+[INFO] Tests run: 8, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.097 s - in com.fasterxml.jackson.databind.MapperJDKSerializationTest
+[INFO] Running com.fasterxml.jackson.databind.contextual.TestContextualKeyTypes
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.006 s - in com.fasterxml.jackson.databind.contextual.TestContextualKeyTypes
+[INFO] Running com.fasterxml.jackson.databind.contextual.TestContextualWithAnnDeserializer
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.002 s - in com.fasterxml.jackson.databind.contextual.TestContextualWithAnnDeserializer
+[INFO] Running com.fasterxml.jackson.databind.contextual.TestContextualDeserialization
+[INFO] Tests run: 8, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.012 s - in com.fasterxml.jackson.databind.contextual.TestContextualDeserialization
+[INFO] Running com.fasterxml.jackson.databind.contextual.TestContextAttributeWithDeser
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.002 s - in com.fasterxml.jackson.databind.contextual.TestContextAttributeWithDeser
+[INFO] Running com.fasterxml.jackson.databind.contextual.TestContextAttributeWithSer
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.003 s - in com.fasterxml.jackson.databind.contextual.TestContextAttributeWithSer
+[INFO] Running com.fasterxml.jackson.databind.contextual.TestContextualSerialization
+[INFO] Tests run: 10, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.013 s - in com.fasterxml.jackson.databind.contextual.TestContextualSerialization
+[INFO] Running com.fasterxml.jackson.databind.seq.SequenceWriterTest
+[INFO] Tests run: 7, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.014 s - in com.fasterxml.jackson.databind.seq.SequenceWriterTest
+[INFO] Running com.fasterxml.jackson.databind.seq.ReadRecoveryTest
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.009 s - in com.fasterxml.jackson.databind.seq.ReadRecoveryTest
+[INFO] Running com.fasterxml.jackson.databind.seq.TestInnerClassReaderFor
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.002 s - in com.fasterxml.jackson.databind.seq.TestInnerClassReaderFor
+[INFO] Running com.fasterxml.jackson.databind.seq.PolyMapWriter827Test
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.005 s - in com.fasterxml.jackson.databind.seq.PolyMapWriter827Test
+[INFO] Running com.fasterxml.jackson.databind.seq.ReadValuesTest
+[INFO] Tests run: 11, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.02 s - in com.fasterxml.jackson.databind.seq.ReadValuesTest
+[INFO] Running com.fasterxml.jackson.databind.deser.impl.BeanPropertyMapTest
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 s - in com.fasterxml.jackson.databind.deser.impl.BeanPropertyMapTest
+[INFO] Running com.fasterxml.jackson.databind.deser.TestOverloaded
+[INFO] Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.01 s - in com.fasterxml.jackson.databind.deser.TestOverloaded
+[INFO] Running com.fasterxml.jackson.databind.deser.TestCustomDeserializers
+[INFO] Tests run: 10, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.018 s - in com.fasterxml.jackson.databind.deser.TestCustomDeserializers
+[INFO] Running com.fasterxml.jackson.databind.deser.validate.FullStreamReadTest
+[INFO] Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.009 s - in com.fasterxml.jackson.databind.deser.validate.FullStreamReadTest
+[INFO] Running com.fasterxml.jackson.databind.deser.TestSetterlessProperties
+[INFO] Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.009 s - in com.fasterxml.jackson.databind.deser.TestSetterlessProperties
+[INFO] Running com.fasterxml.jackson.databind.deser.TestArrayDeserialization
+[INFO] Tests run: 20, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.295 s - in com.fasterxml.jackson.databind.deser.TestArrayDeserialization
+[INFO] Running com.fasterxml.jackson.databind.deser.TestBasicAnnotations
+[INFO] Tests run: 9, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.019 s - in com.fasterxml.jackson.databind.deser.TestBasicAnnotations
+[INFO] Running com.fasterxml.jackson.databind.deser.dos.HugeIntegerCoerceTest
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.016 s - in com.fasterxml.jackson.databind.deser.dos.HugeIntegerCoerceTest
+[INFO] Running com.fasterxml.jackson.databind.deser.merge.MergeWithNullTest
+[INFO] Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.019 s - in com.fasterxml.jackson.databind.deser.merge.MergeWithNullTest
+[INFO] Running com.fasterxml.jackson.databind.deser.merge.NodeMergeTest
+[INFO] Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.007 s - in com.fasterxml.jackson.databind.deser.merge.NodeMergeTest
+[INFO] Running com.fasterxml.jackson.databind.deser.merge.UpdateValueTest
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.007 s - in com.fasterxml.jackson.databind.deser.merge.UpdateValueTest
+[INFO] Running com.fasterxml.jackson.databind.deser.merge.MapMerge1844Test
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.004 s - in com.fasterxml.jackson.databind.deser.merge.MapMerge1844Test
+[INFO] Running com.fasterxml.jackson.databind.deser.merge.ArrayMergeTest
+[INFO] Tests run: 8, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.015 s - in com.fasterxml.jackson.databind.deser.merge.ArrayMergeTest
+[INFO] Running com.fasterxml.jackson.databind.deser.merge.CollectionMergeTest
+[INFO] Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.011 s - in com.fasterxml.jackson.databind.deser.merge.CollectionMergeTest
+[INFO] Running com.fasterxml.jackson.databind.deser.merge.PropertyMergeTest
+[INFO] Tests run: 8, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.029 s - in com.fasterxml.jackson.databind.deser.merge.PropertyMergeTest
+[INFO] Running com.fasterxml.jackson.databind.deser.merge.MapMergeTest
+[INFO] Tests run: 7, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.014 s - in com.fasterxml.jackson.databind.deser.merge.MapMergeTest
+[INFO] Running com.fasterxml.jackson.databind.deser.merge.MapPolymorphicMerge2336Test
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.006 s - in com.fasterxml.jackson.databind.deser.merge.MapPolymorphicMerge2336Test
+[INFO] Running com.fasterxml.jackson.databind.deser.inject.TestInjectables
+[INFO] Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.009 s - in com.fasterxml.jackson.databind.deser.inject.TestInjectables
+[INFO] Running com.fasterxml.jackson.databind.deser.inject.InvalidInjectionTest
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.003 s - in com.fasterxml.jackson.databind.deser.inject.InvalidInjectionTest
+[INFO] Running com.fasterxml.jackson.databind.deser.DeserializerFactoryTest
+[INFO] Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.002 s - in com.fasterxml.jackson.databind.deser.DeserializerFactoryTest
+[INFO] Running com.fasterxml.jackson.databind.deser.jdk.Base64DecodingTest
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.002 s - in com.fasterxml.jackson.databind.deser.jdk.Base64DecodingTest
+[INFO] Running com.fasterxml.jackson.databind.deser.jdk.EnumDefaultReadTest
+[INFO] Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.02 s - in com.fasterxml.jackson.databind.deser.jdk.EnumDefaultReadTest
+[INFO] Running com.fasterxml.jackson.databind.deser.jdk.JDKNumberLeniencyTest
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.003 s - in com.fasterxml.jackson.databind.deser.jdk.JDKNumberLeniencyTest
+[INFO] Running com.fasterxml.jackson.databind.deser.jdk.UntypedDeserializationTest
+[INFO] Tests run: 18, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.021 s - in com.fasterxml.jackson.databind.deser.jdk.UntypedDeserializationTest
+[INFO] Running com.fasterxml.jackson.databind.deser.jdk.TimestampDeserializationTest
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.006 s - in com.fasterxml.jackson.databind.deser.jdk.TimestampDeserializationTest
+[INFO] Running com.fasterxml.jackson.databind.deser.jdk.MapDeserializationTest
+[INFO] Tests run: 25, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.084 s - in com.fasterxml.jackson.databind.deser.jdk.MapDeserializationTest
+[INFO] Running com.fasterxml.jackson.databind.deser.jdk.CustomMapKeys2454Test
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.006 s - in com.fasterxml.jackson.databind.deser.jdk.CustomMapKeys2454Test
+[INFO] Running com.fasterxml.jackson.databind.deser.jdk.DateDeserializationTZTest
+[INFO] Tests run: 10, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.032 s - in com.fasterxml.jackson.databind.deser.jdk.DateDeserializationTZTest
+[INFO] Running com.fasterxml.jackson.databind.deser.jdk.UtilCollectionsTypesTest
+[INFO] Tests run: 11, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.024 s - in com.fasterxml.jackson.databind.deser.jdk.UtilCollectionsTypesTest
+[INFO] Running com.fasterxml.jackson.databind.deser.jdk.MapDeserializerCachingTest
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.007 s - in com.fasterxml.jackson.databind.deser.jdk.MapDeserializerCachingTest
+[INFO] Running com.fasterxml.jackson.databind.deser.jdk.JDKScalarsTest
+[INFO] Tests run: 28, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.054 s - in com.fasterxml.jackson.databind.deser.jdk.JDKScalarsTest
+[INFO] Running com.fasterxml.jackson.databind.deser.jdk.DateDeserializationTest
+[INFO] Tests run: 29, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.031 s - in com.fasterxml.jackson.databind.deser.jdk.DateDeserializationTest
+[INFO] Running com.fasterxml.jackson.databind.deser.jdk.JDKNumberDeserTest
+[INFO] Tests run: 16, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.025 s - in com.fasterxml.jackson.databind.deser.jdk.JDKNumberDeserTest
+[INFO] Running com.fasterxml.jackson.databind.deser.jdk.MapKeyDeserializationTest
+[INFO] Tests run: 9, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.016 s - in com.fasterxml.jackson.databind.deser.jdk.MapKeyDeserializationTest
+[INFO] Running com.fasterxml.jackson.databind.deser.jdk.EnumDeserializationTest
+[INFO] Tests run: 29, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.035 s - in com.fasterxml.jackson.databind.deser.jdk.EnumDeserializationTest
+[INFO] Running com.fasterxml.jackson.databind.deser.jdk.JDKStringLikeTypesTest
+[INFO] Tests run: 20, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.231 s - in com.fasterxml.jackson.databind.deser.jdk.JDKStringLikeTypesTest
+[INFO] Running com.fasterxml.jackson.databind.deser.jdk.MapRelatedTypesDeserTest
+[INFO] Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.005 s - in com.fasterxml.jackson.databind.deser.jdk.MapRelatedTypesDeserTest
+[INFO] Running com.fasterxml.jackson.databind.deser.jdk.EnumAltIdTest
+[INFO] Tests run: 10, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.015 s - in com.fasterxml.jackson.databind.deser.jdk.EnumAltIdTest
+[INFO] Running com.fasterxml.jackson.databind.deser.jdk.TestEmptyArrayBlockingQueueDeser
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.005 s - in com.fasterxml.jackson.databind.deser.jdk.TestEmptyArrayBlockingQueueDeser
+[INFO] Running com.fasterxml.jackson.databind.deser.jdk.CollectionDeserTest
+[INFO] Tests run: 12, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.028 s - in com.fasterxml.jackson.databind.deser.jdk.CollectionDeserTest
+[INFO] Running com.fasterxml.jackson.databind.deser.jdk.JDKAtomicTypesDeserTest
+[INFO] Tests run: 18, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.04 s - in com.fasterxml.jackson.databind.deser.jdk.JDKAtomicTypesDeserTest
+[INFO] Running com.fasterxml.jackson.databind.deser.jdk.EnumMapDeserializationTest
+[INFO] Tests run: 10, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.025 s - in com.fasterxml.jackson.databind.deser.jdk.EnumMapDeserializationTest
+[INFO] Running com.fasterxml.jackson.databind.deser.jdk.JDKCollectionsDeserTest
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.004 s - in com.fasterxml.jackson.databind.deser.jdk.JDKCollectionsDeserTest
+[INFO] Running com.fasterxml.jackson.databind.deser.jdk.EnumAliasDeser2352Test
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.005 s - in com.fasterxml.jackson.databind.deser.jdk.EnumAliasDeser2352Test
+[INFO] Running com.fasterxml.jackson.databind.deser.TestGenerics
+[INFO] Tests run: 7, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.011 s - in com.fasterxml.jackson.databind.deser.TestGenerics
+[INFO] Running com.fasterxml.jackson.databind.deser.PropertyAliasTest
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.009 s - in com.fasterxml.jackson.databind.deser.PropertyAliasTest
+[INFO] Running com.fasterxml.jackson.databind.deser.TestGenericCollectionDeser
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.005 s - in com.fasterxml.jackson.databind.deser.TestGenericCollectionDeser
+[INFO] Running com.fasterxml.jackson.databind.deser.ReadOnlyDeser1805Test
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.007 s - in com.fasterxml.jackson.databind.deser.ReadOnlyDeser1805Test
+[INFO] Running com.fasterxml.jackson.databind.deser.TestBeanDeserializer
+[INFO] Tests run: 12, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.01 s - in com.fasterxml.jackson.databind.deser.TestBeanDeserializer
+[INFO] Running com.fasterxml.jackson.databind.deser.TestInnerClass
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.003 s - in com.fasterxml.jackson.databind.deser.TestInnerClass
+[INFO] Running com.fasterxml.jackson.databind.deser.TestFieldDeserialization
+[INFO] Tests run: 7, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.006 s - in com.fasterxml.jackson.databind.deser.TestFieldDeserialization
+[INFO] Running com.fasterxml.jackson.databind.deser.TestAnnotationUsing
+[INFO] Tests run: 7, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.006 s - in com.fasterxml.jackson.databind.deser.TestAnnotationUsing
+[INFO] Running com.fasterxml.jackson.databind.deser.TestGenericMapDeser
+[INFO] Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.006 s - in com.fasterxml.jackson.databind.deser.TestGenericMapDeser
+[INFO] Running com.fasterxml.jackson.databind.deser.TestJacksonTypes
+[INFO] Tests run: 7, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.038 s - in com.fasterxml.jackson.databind.deser.TestJacksonTypes
+[INFO] Running com.fasterxml.jackson.databind.deser.CyclicTypesDeserTest
+[INFO] Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.008 s - in com.fasterxml.jackson.databind.deser.CyclicTypesDeserTest
+[INFO] Running com.fasterxml.jackson.databind.deser.IgnoreWithDeserTest
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.006 s - in com.fasterxml.jackson.databind.deser.IgnoreWithDeserTest
+[INFO] Running com.fasterxml.jackson.databind.deser.TestValueAnnotations
+[INFO] Tests run: 14, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.013 s - in com.fasterxml.jackson.databind.deser.TestValueAnnotations
+[INFO] Running com.fasterxml.jackson.databind.deser.TestStatics
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 s - in com.fasterxml.jackson.databind.deser.TestStatics
+[INFO] Running com.fasterxml.jackson.databind.deser.creators.TestCreatorNullPrimitives
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.002 s - in com.fasterxml.jackson.databind.deser.creators.TestCreatorNullPrimitives
+[INFO] Running com.fasterxml.jackson.databind.deser.creators.jdk8.PersonTest
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.002 s - in com.fasterxml.jackson.databind.deser.creators.jdk8.PersonTest
+[INFO] Running com.fasterxml.jackson.databind.deser.creators.jdk8.JsonCreatorTest
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.01 s - in com.fasterxml.jackson.databind.deser.creators.jdk8.JsonCreatorTest
+[INFO] Running com.fasterxml.jackson.databind.deser.creators.CreatorPropertiesTest
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.007 s - in com.fasterxml.jackson.databind.deser.creators.CreatorPropertiesTest
+[INFO] Running com.fasterxml.jackson.databind.deser.creators.TestCreatorsDelegating
+[INFO] Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.006 s - in com.fasterxml.jackson.databind.deser.creators.TestCreatorsDelegating
+[INFO] Running com.fasterxml.jackson.databind.deser.creators.TestCreatorWithPolymorphic113
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.006 s - in com.fasterxml.jackson.databind.deser.creators.TestCreatorWithPolymorphic113
+[INFO] Running com.fasterxml.jackson.databind.deser.creators.ImplicitNameMatch792Test
+[INFO] Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.007 s - in com.fasterxml.jackson.databind.deser.creators.ImplicitNameMatch792Test
+[INFO] Running com.fasterxml.jackson.databind.deser.creators.DelegatingCreatorAnnotations2021Test
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.003 s - in com.fasterxml.jackson.databind.deser.creators.DelegatingCreatorAnnotations2021Test
+[INFO] Running com.fasterxml.jackson.databind.deser.creators.TestConstructFromMap
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.003 s - in com.fasterxml.jackson.databind.deser.creators.TestConstructFromMap
+[INFO] Running com.fasterxml.jackson.databind.deser.creators.TestPolymorphicCreators
+[INFO] Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.006 s - in com.fasterxml.jackson.databind.deser.creators.TestPolymorphicCreators
+[INFO] Running com.fasterxml.jackson.databind.deser.creators.DelegatingCreatorImplicitNames1001Test
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.007 s - in com.fasterxml.jackson.databind.deser.creators.DelegatingCreatorImplicitNames1001Test
+[INFO] Running com.fasterxml.jackson.databind.deser.creators.TestCreators
+[INFO] Tests run: 18, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.014 s - in com.fasterxml.jackson.databind.deser.creators.TestCreators
+[INFO] Running com.fasterxml.jackson.databind.deser.creators.TestCreatorNullValue
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.003 s - in com.fasterxml.jackson.databind.deser.creators.TestCreatorNullValue
+[INFO] Running com.fasterxml.jackson.databind.deser.creators.TestCustomValueInstDefaults
+[INFO] Tests run: 7, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.012 s - in com.fasterxml.jackson.databind.deser.creators.TestCustomValueInstDefaults
+[INFO] Running com.fasterxml.jackson.databind.deser.creators.ImplicitParamsForCreatorTest
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.002 s - in com.fasterxml.jackson.databind.deser.creators.ImplicitParamsForCreatorTest
+[INFO] Running com.fasterxml.jackson.databind.deser.creators.ArrayDelegatorCreatorForCollectionTest
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.004 s - in com.fasterxml.jackson.databind.deser.creators.ArrayDelegatorCreatorForCollectionTest
+[INFO] Running com.fasterxml.jackson.databind.deser.creators.DisablingCreatorsTest
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.003 s - in com.fasterxml.jackson.databind.deser.creators.DisablingCreatorsTest
+[INFO] Running com.fasterxml.jackson.databind.deser.creators.TestCreators2
+[INFO] Tests run: 11, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.012 s - in com.fasterxml.jackson.databind.deser.creators.TestCreators2
+[INFO] Running com.fasterxml.jackson.databind.deser.creators.CreatorWithNamingStrategyTest
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.002 s - in com.fasterxml.jackson.databind.deser.creators.CreatorWithNamingStrategyTest
+[INFO] Running com.fasterxml.jackson.databind.deser.creators.FailOnNullCreatorTest
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 s - in com.fasterxml.jackson.databind.deser.creators.FailOnNullCreatorTest
+[INFO] Running com.fasterxml.jackson.databind.deser.creators.InnerClassCreatorTest
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.016 s - in com.fasterxml.jackson.databind.deser.creators.InnerClassCreatorTest
+[INFO] Running com.fasterxml.jackson.databind.deser.creators.DelegatingCreatorAnnotations2016Test
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.004 s - in com.fasterxml.jackson.databind.deser.creators.DelegatingCreatorAnnotations2016Test
+[INFO] Running com.fasterxml.jackson.databind.deser.creators.TestCreatorWithNamingStrategy556
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.002 s - in com.fasterxml.jackson.databind.deser.creators.TestCreatorWithNamingStrategy556
+[INFO] Running com.fasterxml.jackson.databind.deser.creators.TestValueInstantiator
+[INFO] Tests run: 18, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.014 s - in com.fasterxml.jackson.databind.deser.creators.TestValueInstantiator
+[INFO] Running com.fasterxml.jackson.databind.deser.creators.TestCreatorsWithIdentity
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.005 s - in com.fasterxml.jackson.databind.deser.creators.TestCreatorsWithIdentity
+[INFO] Running com.fasterxml.jackson.databind.deser.creators.EnumCreatorTest
+[INFO] Tests run: 14, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.023 s - in com.fasterxml.jackson.databind.deser.creators.EnumCreatorTest
+[INFO] Running com.fasterxml.jackson.databind.deser.creators.SingleArgCreatorTest
+[INFO] Tests run: 7, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.012 s - in com.fasterxml.jackson.databind.deser.creators.SingleArgCreatorTest
+[INFO] Running com.fasterxml.jackson.databind.deser.creators.RequiredCreatorTest
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.003 s - in com.fasterxml.jackson.databind.deser.creators.RequiredCreatorTest
+[INFO] Running com.fasterxml.jackson.databind.deser.creators.CreatorWithObjectIdTest
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.003 s - in com.fasterxml.jackson.databind.deser.creators.CreatorWithObjectIdTest
+[INFO] Running com.fasterxml.jackson.databind.deser.creators.DelegatingArrayCreatorsTest
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.009 s - in com.fasterxml.jackson.databind.deser.creators.DelegatingArrayCreatorsTest
+[INFO] Running com.fasterxml.jackson.databind.deser.creators.DelegatingExternalProperty1003Test
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.008 s - in com.fasterxml.jackson.databind.deser.creators.DelegatingExternalProperty1003Test
+[INFO] Running com.fasterxml.jackson.databind.deser.creators.BigCreatorTest
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.002 s - in com.fasterxml.jackson.databind.deser.creators.BigCreatorTest
+[INFO] Running com.fasterxml.jackson.databind.deser.creators.TestCreators3
+[INFO] Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.015 s - in com.fasterxml.jackson.databind.deser.creators.TestCreators3
+[INFO] Running com.fasterxml.jackson.databind.deser.creators.MultiArgConstructorTest
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.01 s - in com.fasterxml.jackson.databind.deser.creators.MultiArgConstructorTest
+[INFO] Running com.fasterxml.jackson.databind.deser.creators.TestPolymorphicDelegating
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.004 s - in com.fasterxml.jackson.databind.deser.creators.TestPolymorphicDelegating
+[INFO] Running com.fasterxml.jackson.databind.deser.TestObjectOrArrayDeserialization
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.006 s - in com.fasterxml.jackson.databind.deser.TestObjectOrArrayDeserialization
+[INFO] Running com.fasterxml.jackson.databind.deser.ReadOrWriteOnlyTest
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.007 s - in com.fasterxml.jackson.databind.deser.ReadOrWriteOnlyTest
+[INFO] Running com.fasterxml.jackson.databind.deser.TestCachingOfDeser
+[INFO] Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.009 s - in com.fasterxml.jackson.databind.deser.TestCachingOfDeser
+[INFO] Running com.fasterxml.jackson.databind.deser.AnySetterTest
+[INFO] Tests run: 14, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.032 s - in com.fasterxml.jackson.databind.deser.AnySetterTest
+[INFO] Running com.fasterxml.jackson.databind.deser.filter.ReadOnlyDeser1890Test
+[INFO] Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.008 s - in com.fasterxml.jackson.databind.deser.filter.ReadOnlyDeser1890Test
+[INFO] Running com.fasterxml.jackson.databind.deser.filter.NullConversionsGenericTest
+[INFO] Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.023 s - in com.fasterxml.jackson.databind.deser.filter.NullConversionsGenericTest
+[INFO] Running com.fasterxml.jackson.databind.deser.filter.ProblemHandlerLocation1440Test
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.005 s - in com.fasterxml.jackson.databind.deser.filter.ProblemHandlerLocation1440Test
+[INFO] Running com.fasterxml.jackson.databind.deser.filter.ProblemHandler1767Test
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.004 s - in com.fasterxml.jackson.databind.deser.filter.ProblemHandler1767Test
+[INFO] Running com.fasterxml.jackson.databind.deser.filter.UnknownPropertyDeserTest
+[INFO] Tests run: 12, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.023 s - in com.fasterxml.jackson.databind.deser.filter.UnknownPropertyDeserTest
+[INFO] Running com.fasterxml.jackson.databind.deser.filter.NullConversionsForContentTest
+[INFO] Tests run: 16, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.054 s - in com.fasterxml.jackson.databind.deser.filter.NullConversionsForContentTest
+[INFO] Running com.fasterxml.jackson.databind.deser.filter.NullConversionsSkipTest
+[INFO] Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.012 s - in com.fasterxml.jackson.databind.deser.filter.NullConversionsSkipTest
+[INFO] Running com.fasterxml.jackson.databind.deser.filter.RecursiveIgnorePropertiesTest
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.006 s - in com.fasterxml.jackson.databind.deser.filter.RecursiveIgnorePropertiesTest
+[INFO] Running com.fasterxml.jackson.databind.deser.filter.ProblemHandlerUnknownTypeId2221Test
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.009 s - in com.fasterxml.jackson.databind.deser.filter.ProblemHandlerUnknownTypeId2221Test
+[INFO] Running com.fasterxml.jackson.databind.deser.filter.IgnoreCreatorProp1317Test
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.002 s - in com.fasterxml.jackson.databind.deser.filter.IgnoreCreatorProp1317Test
+[INFO] Running com.fasterxml.jackson.databind.deser.filter.ReadOnlyDeser95Test
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.002 s - in com.fasterxml.jackson.databind.deser.filter.ReadOnlyDeser95Test
+[INFO] Running com.fasterxml.jackson.databind.deser.filter.NullConversionsPojoTest
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.019 s - in com.fasterxml.jackson.databind.deser.filter.NullConversionsPojoTest
+[INFO] Running com.fasterxml.jackson.databind.deser.filter.NullConversionsViaCreator2458Test
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.004 s - in com.fasterxml.jackson.databind.deser.filter.NullConversionsViaCreator2458Test
+[INFO] Running com.fasterxml.jackson.databind.deser.filter.ProblemHandlerTest
+[INFO] Tests run: 11, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.018 s - in com.fasterxml.jackson.databind.deser.filter.ProblemHandlerTest
+[INFO] Running com.fasterxml.jackson.databind.deser.filter.IgnorePropertyOnDeserTest
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.01 s - in com.fasterxml.jackson.databind.deser.filter.IgnorePropertyOnDeserTest
+[INFO] Running com.fasterxml.jackson.databind.deser.filter.NullConversionsForEnumsTest
+[INFO] Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.01 s - in com.fasterxml.jackson.databind.deser.filter.NullConversionsForEnumsTest
+[INFO] Running com.fasterxml.jackson.databind.deser.TestConcurrency
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.037 s - in com.fasterxml.jackson.databind.deser.TestConcurrency
+[INFO] Running com.fasterxml.jackson.databind.deser.builder.BuilderInfiniteLoop1979Test
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.012 s - in com.fasterxml.jackson.databind.deser.builder.BuilderInfiniteLoop1979Test
+[INFO] Running com.fasterxml.jackson.databind.deser.builder.BuilderViaUpdateTest
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.004 s - in com.fasterxml.jackson.databind.deser.builder.BuilderViaUpdateTest
+[INFO] Running com.fasterxml.jackson.databind.deser.builder.BuilderWithTypeParametersTest
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.012 s - in com.fasterxml.jackson.databind.deser.builder.BuilderWithTypeParametersTest
+[INFO] Running com.fasterxml.jackson.databind.deser.builder.BuilderWithCreatorTest
+[INFO] Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.014 s - in com.fasterxml.jackson.databind.deser.builder.BuilderWithCreatorTest
+[INFO] Running com.fasterxml.jackson.databind.deser.builder.BuilderWithUnwrappedTest
+[INFO] Tests run: 7, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.017 s - in com.fasterxml.jackson.databind.deser.builder.BuilderWithUnwrappedTest
+[INFO] Running com.fasterxml.jackson.databind.deser.builder.BuilderWithViewTest
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.01 s - in com.fasterxml.jackson.databind.deser.builder.BuilderWithViewTest
+[INFO] Running com.fasterxml.jackson.databind.deser.builder.BuilderFailTest
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.008 s - in com.fasterxml.jackson.databind.deser.builder.BuilderFailTest
+[INFO] Running com.fasterxml.jackson.databind.deser.builder.BuilderSimpleTest
+[INFO] Tests run: 11, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.028 s - in com.fasterxml.jackson.databind.deser.builder.BuilderSimpleTest
+[INFO] Running com.fasterxml.jackson.databind.deser.builder.BuilderAdvancedTest
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.003 s - in com.fasterxml.jackson.databind.deser.builder.BuilderAdvancedTest
+[INFO] Running com.fasterxml.jackson.databind.deser.NullHandlingTest
+[INFO] Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.009 s - in com.fasterxml.jackson.databind.deser.NullHandlingTest
+[INFO] Running com.fasterxml.jackson.databind.module.TestAbstractTypes
+[INFO] Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.005 s - in com.fasterxml.jackson.databind.module.TestAbstractTypes
+[INFO] Running com.fasterxml.jackson.databind.module.TestCustomEnumKeyDeserializer
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.004 s - in com.fasterxml.jackson.databind.module.TestCustomEnumKeyDeserializer
+[INFO] Running com.fasterxml.jackson.databind.module.TestTypeModifierNameResolution
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 s - in com.fasterxml.jackson.databind.module.TestTypeModifierNameResolution
+[INFO] Running com.fasterxml.jackson.databind.module.TestDuplicateRegistration
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 s - in com.fasterxml.jackson.databind.module.TestDuplicateRegistration
+[INFO] Running com.fasterxml.jackson.databind.module.SimpleModuleArgCheckTest
+[INFO] Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.014 s - in com.fasterxml.jackson.databind.module.SimpleModuleArgCheckTest
+[INFO] Running com.fasterxml.jackson.databind.module.TestTypeModifiers
+[INFO] Tests run: 7, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.005 s - in com.fasterxml.jackson.databind.module.TestTypeModifiers
+[INFO] Running com.fasterxml.jackson.databind.module.SimpleModuleTest
+[INFO] Tests run: 11, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.024 s - in com.fasterxml.jackson.databind.module.SimpleModuleTest
+[INFO] Running com.fasterxml.jackson.databind.module.TestKeyDeserializers
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.002 s - in com.fasterxml.jackson.databind.module.TestKeyDeserializers
+[INFO] Running com.fasterxml.jackson.databind.interop.TestExternalizable
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.004 s - in com.fasterxml.jackson.databind.interop.TestExternalizable
+[INFO] Running com.fasterxml.jackson.databind.interop.TestJDKProxy
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.004 s - in com.fasterxml.jackson.databind.interop.TestJDKProxy
+[INFO] Running com.fasterxml.jackson.databind.ext.TestJava6Types
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.002 s - in com.fasterxml.jackson.databind.ext.TestJava6Types
+[INFO] Running com.fasterxml.jackson.databind.ext.jdk8.OptionalnclusionTest
+[INFO] Tests run: 8, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.016 s - in com.fasterxml.jackson.databind.ext.jdk8.OptionalnclusionTest
+[INFO] Running com.fasterxml.jackson.databind.ext.jdk8.OptionalUnwrappedTest
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.012 s - in com.fasterxml.jackson.databind.ext.jdk8.OptionalUnwrappedTest
+[INFO] Running com.fasterxml.jackson.databind.ext.jdk8.OptionalNumbersTest
+[INFO] Tests run: 13, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.015 s - in com.fasterxml.jackson.databind.ext.jdk8.OptionalNumbersTest
+[INFO] Running com.fasterxml.jackson.databind.ext.jdk8.CreatorTest
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.003 s - in com.fasterxml.jackson.databind.ext.jdk8.CreatorTest
+[INFO] Running com.fasterxml.jackson.databind.ext.jdk8.TestOptionalWithPolymorphic
+[INFO] Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.009 s - in com.fasterxml.jackson.databind.ext.jdk8.TestOptionalWithPolymorphic
+[INFO] Running com.fasterxml.jackson.databind.ext.jdk8.OptionalBooleanTest
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.003 s - in com.fasterxml.jackson.databind.ext.jdk8.OptionalBooleanTest
+[INFO] Running com.fasterxml.jackson.databind.ext.jdk8.OptionalWithEmptyTest
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.004 s - in com.fasterxml.jackson.databind.ext.jdk8.OptionalWithEmptyTest
+[INFO] Running com.fasterxml.jackson.databind.ext.jdk8.OptionalTest
+[INFO] Tests run: 12, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.019 s - in com.fasterxml.jackson.databind.ext.jdk8.OptionalTest
+[INFO] Running com.fasterxml.jackson.databind.ext.jdk8.ContextualOptionalTest
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.012 s - in com.fasterxml.jackson.databind.ext.jdk8.ContextualOptionalTest
+[INFO] Running com.fasterxml.jackson.databind.ext.jdk8.OptionalMapsTest
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.004 s - in com.fasterxml.jackson.databind.ext.jdk8.OptionalMapsTest
+[INFO] Running com.fasterxml.jackson.databind.ext.jdk8.PolymoprhicOptionalTest
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.004 s - in com.fasterxml.jackson.databind.ext.jdk8.PolymoprhicOptionalTest
+[INFO] Running com.fasterxml.jackson.databind.ext.jdk8.SchemaVisitorTest
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.012 s - in com.fasterxml.jackson.databind.ext.jdk8.SchemaVisitorTest
+[INFO] Running com.fasterxml.jackson.databind.ext.jdk8.OptionalBasicTest
+[INFO] Tests run: 18, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.028 s - in com.fasterxml.jackson.databind.ext.jdk8.OptionalBasicTest
+[INFO] Running com.fasterxml.jackson.databind.ext.jdk8.JDK8TypesTest
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 s - in com.fasterxml.jackson.databind.ext.jdk8.JDK8TypesTest
+[INFO] Running com.fasterxml.jackson.databind.ext.TestDOM
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.287 s - in com.fasterxml.jackson.databind.ext.TestDOM
+[INFO] Running com.fasterxml.jackson.databind.ext.TestCoreXMLTypes
+[INFO] Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.026 s - in com.fasterxml.jackson.databind.ext.TestCoreXMLTypes
+[INFO] Running com.fasterxml.jackson.databind.ext.TestJava7Types
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.014 s - in com.fasterxml.jackson.databind.ext.TestJava7Types
+[INFO] Running com.fasterxml.jackson.databind.TestRootName
+[INFO] Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.01 s - in com.fasterxml.jackson.databind.TestRootName
+[INFO] Running com.fasterxml.jackson.databind.ObjectWriterTest
+[INFO] Tests run: 14, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.008 s - in com.fasterxml.jackson.databind.ObjectWriterTest
+[INFO] Running com.fasterxml.jackson.databind.TestHandlerInstantiation
+[INFO] Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.012 s - in com.fasterxml.jackson.databind.TestHandlerInstantiation
+[INFO] Running com.fasterxml.jackson.databind.cfg.SerConfigTest
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 s - in com.fasterxml.jackson.databind.cfg.SerConfigTest
+[INFO] Running com.fasterxml.jackson.databind.cfg.ConfigOverridesTest
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.003 s - in com.fasterxml.jackson.databind.cfg.ConfigOverridesTest
+[INFO] Running com.fasterxml.jackson.databind.cfg.DeserializationConfigTest
+[INFO] Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 s - in com.fasterxml.jackson.databind.cfg.DeserializationConfigTest
+[INFO] Running com.fasterxml.jackson.databind.struct.TestPOJOAsArrayWithBuilder
+[INFO] Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.006 s - in com.fasterxml.jackson.databind.struct.TestPOJOAsArrayWithBuilder
+[INFO] Running com.fasterxml.jackson.databind.struct.BackReference1878Test
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.007 s - in com.fasterxml.jackson.databind.struct.BackReference1878Test
+[INFO] Running com.fasterxml.jackson.databind.struct.PojoAsArrayRoundtripTest
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.019 s - in com.fasterxml.jackson.databind.struct.PojoAsArrayRoundtripTest
+[INFO] Running com.fasterxml.jackson.databind.struct.TestUnwrapped
+[INFO] Tests run: 10, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.014 s - in com.fasterxml.jackson.databind.struct.TestUnwrapped
+[INFO] Running com.fasterxml.jackson.databind.struct.UnwrappedWithView1559Test
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.007 s - in com.fasterxml.jackson.databind.struct.UnwrappedWithView1559Test
+[INFO] Running com.fasterxml.jackson.databind.struct.TestForwardReference
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.024 s - in com.fasterxml.jackson.databind.struct.TestForwardReference
+[INFO] Running com.fasterxml.jackson.databind.struct.TestPOJOAsArray
+[INFO] Tests run: 12, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.011 s - in com.fasterxml.jackson.databind.struct.TestPOJOAsArray
+[INFO] Running com.fasterxml.jackson.databind.struct.TestUnwrappedWithPrefix
+[INFO] Tests run: 8, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.011 s - in com.fasterxml.jackson.databind.struct.TestUnwrappedWithPrefix
+[INFO] Running com.fasterxml.jackson.databind.struct.TestPOJOAsArrayPolymorphic
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 s - in com.fasterxml.jackson.databind.struct.TestPOJOAsArrayPolymorphic
+[INFO] Running com.fasterxml.jackson.databind.struct.UnwrapSingleArrayScalarsTest
+[INFO] Tests run: 11, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.031 s - in com.fasterxml.jackson.databind.struct.UnwrapSingleArrayScalarsTest
+[INFO] Running com.fasterxml.jackson.databind.struct.TestUnwrappedWithSameName647
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.002 s - in com.fasterxml.jackson.databind.struct.TestUnwrappedWithSameName647
+[INFO] Running com.fasterxml.jackson.databind.struct.TestBackRefsWithPolymorphic
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.009 s - in com.fasterxml.jackson.databind.struct.TestBackRefsWithPolymorphic
+[INFO] Running com.fasterxml.jackson.databind.struct.FormatFeatureOrderedMapTest
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.002 s - in com.fasterxml.jackson.databind.struct.FormatFeatureOrderedMapTest
+[INFO] Running com.fasterxml.jackson.databind.struct.TestUnwrappedRecursive383
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.006 s - in com.fasterxml.jackson.databind.struct.TestUnwrappedRecursive383
+[INFO] Running com.fasterxml.jackson.databind.struct.UnwrappedCreatorParam265Test
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.007 s - in com.fasterxml.jackson.databind.struct.UnwrappedCreatorParam265Test
+[INFO] Running com.fasterxml.jackson.databind.struct.PojoAsArray646Test
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.009 s - in com.fasterxml.jackson.databind.struct.PojoAsArray646Test
+[INFO] Running com.fasterxml.jackson.databind.struct.FormatFeatureUnwrapSingleTest
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.026 s - in com.fasterxml.jackson.databind.struct.FormatFeatureUnwrapSingleTest
+[INFO] Running com.fasterxml.jackson.databind.struct.TestParentChildReferences
+[INFO] Tests run: 9, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.014 s - in com.fasterxml.jackson.databind.struct.TestParentChildReferences
+[INFO] Running com.fasterxml.jackson.databind.struct.SingleValueAsArrayTest
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.014 s - in com.fasterxml.jackson.databind.struct.SingleValueAsArrayTest
+[INFO] Running com.fasterxml.jackson.databind.struct.TestUnwrappedWithTypeInfo
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.003 s - in com.fasterxml.jackson.databind.struct.TestUnwrappedWithTypeInfo
+[INFO] Running com.fasterxml.jackson.databind.struct.ScalarCoercionTest
+[INFO] Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.013 s - in com.fasterxml.jackson.databind.struct.ScalarCoercionTest
+[INFO] Running com.fasterxml.jackson.databind.struct.TestPOJOAsArrayAdvanced
+[INFO] Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.007 s - in com.fasterxml.jackson.databind.struct.TestPOJOAsArrayAdvanced
+[INFO] Running com.fasterxml.jackson.databind.struct.FormatFeatureAcceptSingleTest
+[INFO] Tests run: 10, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.022 s - in com.fasterxml.jackson.databind.struct.FormatFeatureAcceptSingleTest
+[INFO] Running com.fasterxml.jackson.databind.struct.EmptyArrayAsNullTest
+[INFO] Tests run: 8, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.044 s - in com.fasterxml.jackson.databind.struct.EmptyArrayAsNullTest
+[INFO] Running com.fasterxml.jackson.databind.type.TestGenericsBounded
+[INFO] Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.027 s - in com.fasterxml.jackson.databind.type.TestGenericsBounded
+[INFO] Running com.fasterxml.jackson.databind.type.TestTypeFactoryWithClassLoader
+[INFO] Tests run: 9, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.802 s - in com.fasterxml.jackson.databind.type.TestTypeFactoryWithClassLoader
+[INFO] Running com.fasterxml.jackson.databind.type.TestTypeBindings
+[INFO] Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.002 s - in com.fasterxml.jackson.databind.type.TestTypeBindings
+[INFO] Running com.fasterxml.jackson.databind.type.TestTypeResolution
+[INFO] Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.002 s - in com.fasterxml.jackson.databind.type.TestTypeResolution
+[INFO] Running com.fasterxml.jackson.databind.type.LocalTypeTest
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.005 s - in com.fasterxml.jackson.databind.type.LocalTypeTest
+[INFO] Running com.fasterxml.jackson.databind.type.TestAnnotatedClass
+[INFO] Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 s - in com.fasterxml.jackson.databind.type.TestAnnotatedClass
+[INFO] Running com.fasterxml.jackson.databind.type.TestJavaType
+[INFO] Tests run: 10, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.006 s - in com.fasterxml.jackson.databind.type.TestJavaType
+[INFO] Running com.fasterxml.jackson.databind.type.TypeAliasesTest
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.004 s - in com.fasterxml.jackson.databind.type.TypeAliasesTest
+[INFO] Running com.fasterxml.jackson.databind.type.TestTypeFactory1604
+[INFO] Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.003 s - in com.fasterxml.jackson.databind.type.TestTypeFactory1604
+[INFO] Running com.fasterxml.jackson.databind.type.RecursiveType1658Test
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.004 s - in com.fasterxml.jackson.databind.type.RecursiveType1658Test
+[INFO] Running com.fasterxml.jackson.databind.type.ContainerTypesTest
+[INFO] Tests run: 7, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.003 s - in com.fasterxml.jackson.databind.type.ContainerTypesTest
+[INFO] Running com.fasterxml.jackson.databind.type.NestedTypes1604Test
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.01 s - in com.fasterxml.jackson.databind.type.NestedTypes1604Test
+[INFO] Running com.fasterxml.jackson.databind.type.TestTypeFactory
+[INFO] Tests run: 25, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.012 s - in com.fasterxml.jackson.databind.type.TestTypeFactory
+[INFO] Running com.fasterxml.jackson.databind.type.TestGenericFieldInSubtype
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.009 s - in com.fasterxml.jackson.databind.type.TestGenericFieldInSubtype
+[INFO] Running com.fasterxml.jackson.databind.type.TestTypeFactoryWithRecursiveTypes
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.002 s - in com.fasterxml.jackson.databind.type.TestTypeFactoryWithRecursiveTypes
+[INFO] Running com.fasterxml.jackson.databind.type.PolymorphicList036Test
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.008 s - in com.fasterxml.jackson.databind.type.PolymorphicList036Test
+[INFO] Running com.fasterxml.jackson.databind.type.RecursiveTypeTest
+[INFO] Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.006 s - in com.fasterxml.jackson.databind.type.RecursiveTypeTest
+[INFO] Running com.fasterxml.jackson.databind.TestVersions
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.004 s - in com.fasterxml.jackson.databind.TestVersions
+[INFO] Running com.fasterxml.jackson.databind.jsonschema.SchemaWithUUIDTest
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.005 s - in com.fasterxml.jackson.databind.jsonschema.SchemaWithUUIDTest
+[INFO] Running com.fasterxml.jackson.databind.jsonschema.NewSchemaTest
+[INFO] Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.035 s - in com.fasterxml.jackson.databind.jsonschema.NewSchemaTest
+[INFO] Running com.fasterxml.jackson.databind.MapperViaParserTest
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.003 s - in com.fasterxml.jackson.databind.MapperViaParserTest
+[INFO] Running com.fasterxml.jackson.databind.format.MapFormatShapeTest
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.008 s - in com.fasterxml.jackson.databind.format.MapFormatShapeTest
+[INFO] Running com.fasterxml.jackson.databind.format.EnumFormatShapeTest
+[INFO] Tests run: 9, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.018 s - in com.fasterxml.jackson.databind.format.EnumFormatShapeTest
+[INFO] Running com.fasterxml.jackson.databind.format.BooleanFormatTest
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.007 s - in com.fasterxml.jackson.databind.format.BooleanFormatTest
+[INFO] Running com.fasterxml.jackson.databind.format.DateFormatTest
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.006 s - in com.fasterxml.jackson.databind.format.DateFormatTest
+[INFO] Running com.fasterxml.jackson.databind.format.CollectionFormatShapeTest
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.003 s - in com.fasterxml.jackson.databind.format.CollectionFormatShapeTest
+[INFO] Running com.fasterxml.jackson.databind.format.MapEntryFormatTest
+[INFO] Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.047 s - in com.fasterxml.jackson.databind.format.MapEntryFormatTest
+[INFO] Running com.fasterxml.jackson.databind.exc.TestExceptionsDuringWriting
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.034 s - in com.fasterxml.jackson.databind.exc.TestExceptionsDuringWriting
+[INFO] Running com.fasterxml.jackson.databind.exc.BasicExceptionTest
+[INFO] Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.01 s - in com.fasterxml.jackson.databind.exc.BasicExceptionTest
+[INFO] Running com.fasterxml.jackson.databind.exc.TestExceptionHandlingWithJsonCreatorDeserialization
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.017 s - in com.fasterxml.jackson.databind.exc.TestExceptionHandlingWithJsonCreatorDeserialization
+[INFO] Running com.fasterxml.jackson.databind.exc.TestExceptionHandlingWithDefaultDeserialization
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.002 s - in com.fasterxml.jackson.databind.exc.TestExceptionHandlingWithDefaultDeserialization
+[INFO] Running com.fasterxml.jackson.databind.exc.StackTraceElementTest
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.019 s - in com.fasterxml.jackson.databind.exc.StackTraceElementTest
+[INFO] Running com.fasterxml.jackson.databind.exc.DeserExceptionTypeTest
+[INFO] Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.007 s - in com.fasterxml.jackson.databind.exc.DeserExceptionTypeTest
+[INFO] Running com.fasterxml.jackson.databind.exc.ExceptionPathTest
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.004 s - in com.fasterxml.jackson.databind.exc.ExceptionPathTest
+[INFO] Running com.fasterxml.jackson.databind.exc.ExceptionDeserializationTest
+[INFO] Tests run: 9, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.023 s - in com.fasterxml.jackson.databind.exc.ExceptionDeserializationTest
+[INFO] Running com.fasterxml.jackson.databind.exc.ExceptionSerializationTest
+[INFO] Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.016 s - in com.fasterxml.jackson.databind.exc.ExceptionSerializationTest
+[INFO] Running com.fasterxml.jackson.databind.ser.TestCustomSerializers
+[INFO] Tests run: 8, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.007 s - in com.fasterxml.jackson.databind.ser.TestCustomSerializers
+[INFO] Running com.fasterxml.jackson.databind.ser.TestAnnotationInheritance
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.004 s - in com.fasterxml.jackson.databind.ser.TestAnnotationInheritance
+[INFO] Running com.fasterxml.jackson.databind.ser.TestTypedRootValueSerialization
+[INFO] Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.004 s - in com.fasterxml.jackson.databind.ser.TestTypedRootValueSerialization
+[INFO] Running com.fasterxml.jackson.databind.ser.BeanSerializerModifier1612Test
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.003 s - in com.fasterxml.jackson.databind.ser.BeanSerializerModifier1612Test
+[INFO] Running com.fasterxml.jackson.databind.ser.EnumAsMapKeyTest
+[INFO] Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.017 s - in com.fasterxml.jackson.databind.ser.EnumAsMapKeyTest
+[INFO] Running com.fasterxml.jackson.databind.ser.TestVirtualProperties
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.006 s - in com.fasterxml.jackson.databind.ser.TestVirtualProperties
+[INFO] Running com.fasterxml.jackson.databind.ser.AnyGetterTest
+[INFO] Tests run: 10, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.024 s - in com.fasterxml.jackson.databind.ser.AnyGetterTest
+[INFO] Running com.fasterxml.jackson.databind.ser.TestSerConfig
+[INFO] Tests run: 8, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.009 s - in com.fasterxml.jackson.databind.ser.TestSerConfig
+[INFO] Running com.fasterxml.jackson.databind.ser.jdk.DateSerializationTest
+[INFO] Tests run: 15, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.036 s - in com.fasterxml.jackson.databind.ser.jdk.DateSerializationTest
+[INFO] Running com.fasterxml.jackson.databind.ser.jdk.UntypedSerializationTest
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.003 s - in com.fasterxml.jackson.databind.ser.jdk.UntypedSerializationTest
+[INFO] Running com.fasterxml.jackson.databind.ser.jdk.AtomicTypeSerializationTest
+[INFO] Tests run: 9, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.015 s - in com.fasterxml.jackson.databind.ser.jdk.AtomicTypeSerializationTest
+[INFO] Running com.fasterxml.jackson.databind.ser.jdk.NumberSerTest
+[INFO] Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.018 s - in com.fasterxml.jackson.databind.ser.jdk.NumberSerTest
+[INFO] Running com.fasterxml.jackson.databind.ser.jdk.BigDecimalPlain2230Test
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.003 s - in com.fasterxml.jackson.databind.ser.jdk.BigDecimalPlain2230Test
+[INFO] Running com.fasterxml.jackson.databind.ser.jdk.BigDecimalAsString2519Test
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.006 s - in com.fasterxml.jackson.databind.ser.jdk.BigDecimalAsString2519Test
+[INFO] Running com.fasterxml.jackson.databind.ser.jdk.SqlDateSerializationTest
+[INFO] Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.011 s - in com.fasterxml.jackson.databind.ser.jdk.SqlDateSerializationTest
+[INFO] Running com.fasterxml.jackson.databind.ser.jdk.KeySerializers1679Test
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.006 s - in com.fasterxml.jackson.databind.ser.jdk.KeySerializers1679Test
+[INFO] Running com.fasterxml.jackson.databind.ser.jdk.MapKeySerializationTest
+[INFO] Tests run: 12, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.023 s - in com.fasterxml.jackson.databind.ser.jdk.MapKeySerializationTest
+[INFO] Running com.fasterxml.jackson.databind.ser.jdk.MapKeySerialization2306Test
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.002 s - in com.fasterxml.jackson.databind.ser.jdk.MapKeySerialization2306Test
+[INFO] Running com.fasterxml.jackson.databind.ser.jdk.CollectionSerializationTest
+[INFO] Tests run: 10, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.048 s - in com.fasterxml.jackson.databind.ser.jdk.CollectionSerializationTest
+[INFO] Running com.fasterxml.jackson.databind.ser.jdk.JDKTypeSerializationTest
+[INFO] Tests run: 15, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.028 s - in com.fasterxml.jackson.databind.ser.jdk.JDKTypeSerializationTest
+[INFO] Running com.fasterxml.jackson.databind.ser.FieldSerializationTest
+[INFO] Tests run: 9, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.016 s - in com.fasterxml.jackson.databind.ser.FieldSerializationTest
+[INFO] Running com.fasterxml.jackson.databind.ser.RawValueTest
+[INFO] Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.008 s - in com.fasterxml.jackson.databind.ser.RawValueTest
+[INFO] Running com.fasterxml.jackson.databind.ser.TestIterable
+[INFO] Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.008 s - in com.fasterxml.jackson.databind.ser.TestIterable
+[INFO] Running com.fasterxml.jackson.databind.ser.TestEnumSerialization
+[INFO] Tests run: 20, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.014 s - in com.fasterxml.jackson.databind.ser.TestEnumSerialization
+[INFO] Running com.fasterxml.jackson.databind.ser.TestTreeSerialization
+[INFO] Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.009 s - in com.fasterxml.jackson.databind.ser.TestTreeSerialization
+[INFO] Running com.fasterxml.jackson.databind.ser.TestRootType
+[INFO] Tests run: 9, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.006 s - in com.fasterxml.jackson.databind.ser.TestRootType
+[INFO] Running com.fasterxml.jackson.databind.ser.TestJsonSerialize2
+[INFO] Tests run: 10, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.015 s - in com.fasterxml.jackson.databind.ser.TestJsonSerialize2
+[INFO] Running com.fasterxml.jackson.databind.ser.TestJacksonTypes
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 s - in com.fasterxml.jackson.databind.ser.TestJacksonTypes
+[INFO] Running com.fasterxml.jackson.databind.ser.SerializationOrderTest
+[INFO] Tests run: 8, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.013 s - in com.fasterxml.jackson.databind.ser.SerializationOrderTest
+[INFO] Running com.fasterxml.jackson.databind.ser.TestStatics
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.003 s - in com.fasterxml.jackson.databind.ser.TestStatics
+[INFO] Running com.fasterxml.jackson.databind.ser.JsonValueTest
+[INFO] Tests run: 12, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.025 s - in com.fasterxml.jackson.databind.ser.JsonValueTest
+[INFO] Running com.fasterxml.jackson.databind.ser.TestJsonSerialize3
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.007 s - in com.fasterxml.jackson.databind.ser.TestJsonSerialize3
+[INFO] Running com.fasterxml.jackson.databind.ser.filter.MapInclusion2573Test
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.007 s - in com.fasterxml.jackson.databind.ser.filter.MapInclusion2573Test
+[INFO] Running com.fasterxml.jackson.databind.ser.filter.JsonIncludeOverrideTest
+[INFO] Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.025 s - in com.fasterxml.jackson.databind.ser.filter.JsonIncludeOverrideTest
+[INFO] Running com.fasterxml.jackson.databind.ser.filter.JsonIncludeArrayTest
+[INFO] Tests run: 8, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.015 s - in com.fasterxml.jackson.databind.ser.filter.JsonIncludeArrayTest
+[INFO] Running com.fasterxml.jackson.databind.ser.filter.JsonInclude1327Test
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.006 s - in com.fasterxml.jackson.databind.ser.filter.JsonInclude1327Test
+[INFO] Running com.fasterxml.jackson.databind.ser.filter.MapInclusionTest
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.007 s - in com.fasterxml.jackson.databind.ser.filter.MapInclusionTest
+[INFO] Running com.fasterxml.jackson.databind.ser.filter.TestIgnoredTypes
+[INFO] Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.008 s - in com.fasterxml.jackson.databind.ser.filter.TestIgnoredTypes
+[INFO] Running com.fasterxml.jackson.databind.ser.filter.TestSimpleSerializationIgnore
+[INFO] Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.004 s - in com.fasterxml.jackson.databind.ser.filter.TestSimpleSerializationIgnore
+[INFO] Running com.fasterxml.jackson.databind.ser.filter.JsonIncludeTest
+[INFO] Tests run: 12, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.038 s - in com.fasterxml.jackson.databind.ser.filter.JsonIncludeTest
+[INFO] Running com.fasterxml.jackson.databind.ser.filter.NullSerializationTest
+[INFO] Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.008 s - in com.fasterxml.jackson.databind.ser.filter.NullSerializationTest
+[INFO] Running com.fasterxml.jackson.databind.ser.filter.TestAnyGetterFiltering
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.004 s - in com.fasterxml.jackson.databind.ser.filter.TestAnyGetterFiltering
+[INFO] Running com.fasterxml.jackson.databind.ser.filter.IgnorePropsForSerTest
+[INFO] Tests run: 8, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.02 s - in com.fasterxml.jackson.databind.ser.filter.IgnorePropsForSerTest
+[INFO] Running com.fasterxml.jackson.databind.ser.filter.TestMapFiltering
+[INFO] Tests run: 10, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.014 s - in com.fasterxml.jackson.databind.ser.filter.TestMapFiltering
+[INFO] Running com.fasterxml.jackson.databind.ser.filter.JsonIncludeCollectionTest
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.003 s - in com.fasterxml.jackson.databind.ser.filter.JsonIncludeCollectionTest
+[INFO] Running com.fasterxml.jackson.databind.ser.filter.TestJsonFilter
+[INFO] Tests run: 8, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.007 s - in com.fasterxml.jackson.databind.ser.filter.TestJsonFilter
+[INFO] Running com.fasterxml.jackson.databind.ser.filter.JsonIncludeCustomTest
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.007 s - in com.fasterxml.jackson.databind.ser.filter.JsonIncludeCustomTest
+[INFO] Running com.fasterxml.jackson.databind.ser.TestJsonSerializeAs
+[INFO] Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.007 s - in com.fasterxml.jackson.databind.ser.TestJsonSerializeAs
+[INFO] Running com.fasterxml.jackson.databind.ser.BeanSerializerModifierTest
+[INFO] Tests run: 11, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.017 s - in com.fasterxml.jackson.databind.ser.BeanSerializerModifierTest
+[INFO] Running com.fasterxml.jackson.databind.ser.TestArraySerialization
+[INFO] Tests run: 7, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.162 s - in com.fasterxml.jackson.databind.ser.TestArraySerialization
+[INFO] Running com.fasterxml.jackson.databind.ser.CyclicTypeSerTest
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.006 s - in com.fasterxml.jackson.databind.ser.CyclicTypeSerTest
+[INFO] Running com.fasterxml.jackson.databind.ser.TestSimpleTypes
+[INFO] Tests run: 8, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.006 s - in com.fasterxml.jackson.databind.ser.TestSimpleTypes
+[INFO] Running com.fasterxml.jackson.databind.ser.TestMapSerialization
+[INFO] Tests run: 11, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.017 s - in com.fasterxml.jackson.databind.ser.TestMapSerialization
+[INFO] Running com.fasterxml.jackson.databind.ser.SerializationFeaturesTest
+[INFO] Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.009 s - in com.fasterxml.jackson.databind.ser.SerializationFeaturesTest
+[INFO] Running com.fasterxml.jackson.databind.ser.TestGenericTypes
+[INFO] Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.009 s - in com.fasterxml.jackson.databind.ser.TestGenericTypes
+[INFO] Running com.fasterxml.jackson.databind.ser.TestAnnotations
+[INFO] Tests run: 9, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.009 s - in com.fasterxml.jackson.databind.ser.TestAnnotations
+[INFO] Running com.fasterxml.jackson.databind.ser.TestAutoDetect
+[INFO] Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.008 s - in com.fasterxml.jackson.databind.ser.TestAutoDetect
+[INFO] Running com.fasterxml.jackson.databind.ser.TestEmptyClass
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.003 s - in com.fasterxml.jackson.databind.ser.TestEmptyClass
+[INFO] Running com.fasterxml.jackson.databind.ser.TestJsonSerialize
+[INFO] Tests run: 10, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.008 s - in com.fasterxml.jackson.databind.ser.TestJsonSerialize
+[INFO] Running com.fasterxml.jackson.databind.ObjectMapperTest
+[INFO] Tests run: 9, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.02 s - in com.fasterxml.jackson.databind.ObjectMapperTest
+[INFO] Running com.fasterxml.jackson.databind.node.TestFindMethods
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.008 s - in com.fasterxml.jackson.databind.node.TestFindMethods
+[INFO] Running com.fasterxml.jackson.databind.node.TextNodeTest
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.002 s - in com.fasterxml.jackson.databind.node.TextNodeTest
+[INFO] Running com.fasterxml.jackson.databind.node.TestTreeWithType
+[INFO] Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.004 s - in com.fasterxml.jackson.databind.node.TestTreeWithType
+[INFO] Running com.fasterxml.jackson.databind.node.NotANumberConversionTest
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.007 s - in com.fasterxml.jackson.databind.node.NotANumberConversionTest
+[INFO] Running com.fasterxml.jackson.databind.node.TestMissingNode
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.003 s - in com.fasterxml.jackson.databind.node.TestMissingNode
+[INFO] Running com.fasterxml.jackson.databind.node.TestDeepCopy
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 s - in com.fasterxml.jackson.databind.node.TestDeepCopy
+[INFO] Running com.fasterxml.jackson.databind.node.JsonNodeFactoryTest
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 s - in com.fasterxml.jackson.databind.node.JsonNodeFactoryTest
+[INFO] Running com.fasterxml.jackson.databind.node.TestNullNode
+[INFO] Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.007 s - in com.fasterxml.jackson.databind.node.TestNullNode
+[INFO] Running com.fasterxml.jackson.databind.node.NumberNodesTest
+[INFO] Tests run: 13, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.011 s - in com.fasterxml.jackson.databind.node.NumberNodesTest
+[INFO] Running com.fasterxml.jackson.databind.node.RequiredAccessorTest
+[INFO] Tests run: 7, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.002 s - in com.fasterxml.jackson.databind.node.RequiredAccessorTest
+[INFO] Running com.fasterxml.jackson.databind.node.ArrayNodeTest
+[INFO] Tests run: 13, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.002 s - in com.fasterxml.jackson.databind.node.ArrayNodeTest
+[INFO] Running com.fasterxml.jackson.databind.node.TestTreeDeserialization
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 s - in com.fasterxml.jackson.databind.node.TestTreeDeserialization
+[INFO] Running com.fasterxml.jackson.databind.node.ObjectNodeTest
+[INFO] Tests run: 20, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.01 s - in com.fasterxml.jackson.databind.node.ObjectNodeTest
+[INFO] Running com.fasterxml.jackson.databind.node.TestTreeTraversingParser
+[INFO] Tests run: 11, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.008 s - in com.fasterxml.jackson.databind.node.TestTreeTraversingParser
+[INFO] Running com.fasterxml.jackson.databind.node.POJONodeTest
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.003 s - in com.fasterxml.jackson.databind.node.POJONodeTest
+[INFO] Running com.fasterxml.jackson.databind.node.TreeFromIncompleteJsonTest
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 s - in com.fasterxml.jackson.databind.node.TreeFromIncompleteJsonTest
+[INFO] Running com.fasterxml.jackson.databind.node.TestJsonPointer
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 s - in com.fasterxml.jackson.databind.node.TestJsonPointer
+[INFO] Running com.fasterxml.jackson.databind.node.TestConversions
+[INFO] Tests run: 13, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.033 s - in com.fasterxml.jackson.databind.node.TestConversions
+[INFO] Running com.fasterxml.jackson.databind.node.EmptyContentAsTreeTest
+[INFO] Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.003 s - in com.fasterxml.jackson.databind.node.EmptyContentAsTreeTest
+[INFO] Running com.fasterxml.jackson.databind.node.ToStringForNodesTest
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.005 s - in com.fasterxml.jackson.databind.node.ToStringForNodesTest
+[INFO] Running com.fasterxml.jackson.databind.node.TestJsonNode
+[INFO] Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.01 s - in com.fasterxml.jackson.databind.node.TestJsonNode
+[INFO] Running com.fasterxml.jackson.databind.node.TreeReadViaMapperTest
+[INFO] Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.007 s - in com.fasterxml.jackson.databind.node.TreeReadViaMapperTest
+[INFO] Running com.fasterxml.jackson.databind.views.TestViewsSerialization2
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.004 s - in com.fasterxml.jackson.databind.views.TestViewsSerialization2
+[INFO] Running com.fasterxml.jackson.databind.views.DefaultViewTest
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.006 s - in com.fasterxml.jackson.databind.views.DefaultViewTest
+[INFO] Running com.fasterxml.jackson.databind.views.ViewsWithSchemaTest
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.007 s - in com.fasterxml.jackson.databind.views.ViewsWithSchemaTest
+[INFO] Running com.fasterxml.jackson.databind.views.TestViewDeserialization
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.003 s - in com.fasterxml.jackson.databind.views.TestViewDeserialization
+[INFO] Running com.fasterxml.jackson.databind.views.TestViewSerialization
+[INFO] Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.007 s - in com.fasterxml.jackson.databind.views.TestViewSerialization
+[INFO] Running com.fasterxml.jackson.databind.TestNodeJDKSerialization
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.02 s - in com.fasterxml.jackson.databind.TestNodeJDKSerialization
+[INFO] Running com.fasterxml.jackson.databind.jsontype.TestTypedContainerSerialization
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.013 s - in com.fasterxml.jackson.databind.jsontype.TestTypedContainerSerialization
+[INFO] Running com.fasterxml.jackson.databind.jsontype.GenericTypeId1735Test
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.007 s - in com.fasterxml.jackson.databind.jsontype.GenericTypeId1735Test
+[INFO] Running com.fasterxml.jackson.databind.jsontype.TestPolymorphicWithDefaultImpl
+[INFO] Tests run: 12, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.024 s - in com.fasterxml.jackson.databind.jsontype.TestPolymorphicWithDefaultImpl
+[INFO] Running com.fasterxml.jackson.databind.jsontype.TestEnumTyping
+[INFO] Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.019 s - in com.fasterxml.jackson.databind.jsontype.TestEnumTyping
+[INFO] Running com.fasterxml.jackson.databind.jsontype.TestOverlappingTypeIdNames
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.009 s - in com.fasterxml.jackson.databind.jsontype.TestOverlappingTypeIdNames
+[INFO] Running com.fasterxml.jackson.databind.jsontype.TypeResolverTest
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.009 s - in com.fasterxml.jackson.databind.jsontype.TypeResolverTest
+[INFO] Running com.fasterxml.jackson.databind.jsontype.NoTypeInfoTest
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.003 s - in com.fasterxml.jackson.databind.jsontype.NoTypeInfoTest
+[INFO] Running com.fasterxml.jackson.databind.jsontype.PolymorphicViaRefTypeTest
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.016 s - in com.fasterxml.jackson.databind.jsontype.PolymorphicViaRefTypeTest
+[INFO] Running com.fasterxml.jackson.databind.jsontype.TestSubtypesWithDefaultImpl
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.011 s - in com.fasterxml.jackson.databind.jsontype.TestSubtypesWithDefaultImpl
+[INFO] Running com.fasterxml.jackson.databind.jsontype.TestAbstractTypeNames
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.007 s - in com.fasterxml.jackson.databind.jsontype.TestAbstractTypeNames
+[INFO] Running com.fasterxml.jackson.databind.jsontype.ExistingPropertyTest
+[INFO] Tests run: 8, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.025 s - in com.fasterxml.jackson.databind.jsontype.ExistingPropertyTest
+[INFO] Running com.fasterxml.jackson.databind.jsontype.TestTypedArrayDeserialization
+[INFO] Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.006 s - in com.fasterxml.jackson.databind.jsontype.TestTypedArrayDeserialization
+[INFO] Running com.fasterxml.jackson.databind.jsontype.Generic1128Test
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.007 s - in com.fasterxml.jackson.databind.jsontype.Generic1128Test
+[INFO] Running com.fasterxml.jackson.databind.jsontype.ext.MultipleExternalIds291Test
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.018 s - in com.fasterxml.jackson.databind.jsontype.ext.MultipleExternalIds291Test
+[INFO] Running com.fasterxml.jackson.databind.jsontype.ext.ExternalTypeIdTest
+[INFO] Tests run: 15, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.044 s - in com.fasterxml.jackson.databind.jsontype.ext.ExternalTypeIdTest
+[INFO] Running com.fasterxml.jackson.databind.jsontype.ext.ExternalTypeIdWithIgnoreUnknownTest
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.007 s - in com.fasterxml.jackson.databind.jsontype.ext.ExternalTypeIdWithIgnoreUnknownTest
+[INFO] Running com.fasterxml.jackson.databind.jsontype.ext.ExternalTypeIdWithEnum1328Test
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.007 s - in com.fasterxml.jackson.databind.jsontype.ext.ExternalTypeIdWithEnum1328Test
+[INFO] Running com.fasterxml.jackson.databind.jsontype.ext.JsonValueExtTypeIdTest
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.014 s - in com.fasterxml.jackson.databind.jsontype.ext.JsonValueExtTypeIdTest
+[INFO] Running com.fasterxml.jackson.databind.jsontype.ext.ExternalTypeIdWithCreatorTest
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.012 s - in com.fasterxml.jackson.databind.jsontype.ext.ExternalTypeIdWithCreatorTest
+[INFO] Running com.fasterxml.jackson.databind.jsontype.TypeDeserializerTest
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 s - in com.fasterxml.jackson.databind.jsontype.TypeDeserializerTest
+[INFO] Running com.fasterxml.jackson.databind.jsontype.TestBaseTypeAsDefault
+[INFO] Tests run: 7, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.005 s - in com.fasterxml.jackson.databind.jsontype.TestBaseTypeAsDefault
+[INFO] Running com.fasterxml.jackson.databind.jsontype.TestAbstractContainers
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.004 s - in com.fasterxml.jackson.databind.jsontype.TestAbstractContainers
+[INFO] Running com.fasterxml.jackson.databind.jsontype.WrapperObjectWithObjectIdTest
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.005 s - in com.fasterxml.jackson.databind.jsontype.WrapperObjectWithObjectIdTest
+[INFO] Running com.fasterxml.jackson.databind.jsontype.TestTypeNames
+[INFO] Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.009 s - in com.fasterxml.jackson.databind.jsontype.TestTypeNames
+[INFO] Running com.fasterxml.jackson.databind.jsontype.JsonTypeInfoCaseInsensitive1983Test
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.005 s - in com.fasterxml.jackson.databind.jsontype.JsonTypeInfoCaseInsensitive1983Test
+[INFO] Running com.fasterxml.jackson.databind.jsontype.vld.BasicPTVKnownTypesTest
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.004 s - in com.fasterxml.jackson.databind.jsontype.vld.BasicPTVKnownTypesTest
+[INFO] Running com.fasterxml.jackson.databind.jsontype.vld.AnnotatedPolymorphicValidationTest
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.005 s - in com.fasterxml.jackson.databind.jsontype.vld.AnnotatedPolymorphicValidationTest
+[INFO] Running com.fasterxml.jackson.databind.jsontype.vld.BasicPTVTest
+[INFO] Tests run: 7, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.028 s - in com.fasterxml.jackson.databind.jsontype.vld.BasicPTVTest
+[INFO] Running com.fasterxml.jackson.databind.jsontype.vld.BasicPTVWithArraysTest
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.015 s - in com.fasterxml.jackson.databind.jsontype.vld.BasicPTVWithArraysTest
+[INFO] Running com.fasterxml.jackson.databind.jsontype.vld.ValidatePolymBaseTypeTest
+[INFO] Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.01 s - in com.fasterxml.jackson.databind.jsontype.vld.ValidatePolymBaseTypeTest
+[INFO] Running com.fasterxml.jackson.databind.jsontype.vld.ValidatePolymSubTypeTest
+[INFO] Tests run: 18, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.023 s - in com.fasterxml.jackson.databind.jsontype.vld.ValidatePolymSubTypeTest
+[INFO] Running com.fasterxml.jackson.databind.jsontype.vld.CustomPTVMatchersTest
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.011 s - in com.fasterxml.jackson.databind.jsontype.vld.CustomPTVMatchersTest
+[INFO] Running com.fasterxml.jackson.databind.jsontype.GenericNestedType2331Test
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.007 s - in com.fasterxml.jackson.databind.jsontype.GenericNestedType2331Test
+[INFO] Running com.fasterxml.jackson.databind.jsontype.TestVisibleTypeId
+[INFO] Tests run: 10, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.012 s - in com.fasterxml.jackson.databind.jsontype.TestVisibleTypeId
+[INFO] Running com.fasterxml.jackson.databind.jsontype.TestTypedDeserialization
+[INFO] Tests run: 10, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.018 s - in com.fasterxml.jackson.databind.jsontype.TestTypedDeserialization
+[INFO] Running com.fasterxml.jackson.databind.jsontype.TestWithGenerics
+[INFO] Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.009 s - in com.fasterxml.jackson.databind.jsontype.TestWithGenerics
+[INFO] Running com.fasterxml.jackson.databind.jsontype.TestScalars
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.008 s - in com.fasterxml.jackson.databind.jsontype.TestScalars
+[INFO] Running com.fasterxml.jackson.databind.jsontype.TestCustomTypeIdResolver
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.008 s - in com.fasterxml.jackson.databind.jsontype.TestCustomTypeIdResolver
+[INFO] Running com.fasterxml.jackson.databind.jsontype.TestTypedArraySerialization
+[INFO] Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.009 s - in com.fasterxml.jackson.databind.jsontype.TestTypedArraySerialization
+[INFO] Running com.fasterxml.jackson.databind.jsontype.TestTypedSerialization
+[INFO] Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.01 s - in com.fasterxml.jackson.databind.jsontype.TestTypedSerialization
+[INFO] Running com.fasterxml.jackson.databind.jsontype.AbstractTypeMapping1186Test
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.013 s - in com.fasterxml.jackson.databind.jsontype.AbstractTypeMapping1186Test
+[INFO] Running com.fasterxml.jackson.databind.jsontype.UnknownSubClassTest
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.003 s - in com.fasterxml.jackson.databind.jsontype.UnknownSubClassTest
+[INFO] Running com.fasterxml.jackson.databind.jsontype.TestPropertyTypeInfo
+[INFO] Tests run: 8, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.019 s - in com.fasterxml.jackson.databind.jsontype.TestPropertyTypeInfo
+[INFO] Running com.fasterxml.jackson.databind.jsontype.TestPolymorphicWithDefaultImpl1565
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.002 s - in com.fasterxml.jackson.databind.jsontype.TestPolymorphicWithDefaultImpl1565
+[INFO] Running com.fasterxml.jackson.databind.jsontype.TestSubtypes
+[INFO] Tests run: 13, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.04 s - in com.fasterxml.jackson.databind.jsontype.TestSubtypes
+[INFO] Running com.fasterxml.jackson.databind.jsontype.TestGenericListSerialization
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.005 s - in com.fasterxml.jackson.databind.jsontype.TestGenericListSerialization
+[INFO] Running com.fasterxml.jackson.databind.jsontype.TypeRefinementForMapTest
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.013 s - in com.fasterxml.jackson.databind.jsontype.TypeRefinementForMapTest
+[INFO] Running com.fasterxml.jackson.databind.jsontype.TestPolymorphicDeserialization676
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.025 s - in com.fasterxml.jackson.databind.jsontype.TestPolymorphicDeserialization676
+[INFO] Running com.fasterxml.jackson.databind.jsontype.SubTypeResolution1964Test
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.009 s - in com.fasterxml.jackson.databind.jsontype.SubTypeResolution1964Test
+[INFO] Running com.fasterxml.jackson.databind.jsontype.PolymorphicList1451SerTest
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.005 s - in com.fasterxml.jackson.databind.jsontype.PolymorphicList1451SerTest
+[INFO] Running com.fasterxml.jackson.databind.jsontype.deftyping.TestDefaultForTreeNodes
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.002 s - in com.fasterxml.jackson.databind.jsontype.deftyping.TestDefaultForTreeNodes
+[INFO] Running com.fasterxml.jackson.databind.jsontype.deftyping.TestDefaultForLists
+[INFO] Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.013 s - in com.fasterxml.jackson.databind.jsontype.deftyping.TestDefaultForLists
+[INFO] Running com.fasterxml.jackson.databind.jsontype.deftyping.TestDefaultForScalars
+[INFO] Tests run: 7, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.01 s - in com.fasterxml.jackson.databind.jsontype.deftyping.TestDefaultForScalars
+[INFO] Running com.fasterxml.jackson.databind.jsontype.deftyping.TestDefaultForArrays
+[INFO] Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.017 s - in com.fasterxml.jackson.databind.jsontype.deftyping.TestDefaultForArrays
+[INFO] Running com.fasterxml.jackson.databind.jsontype.deftyping.DefaultWithBaseType1093Test
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.003 s - in com.fasterxml.jackson.databind.jsontype.deftyping.DefaultWithBaseType1093Test
+[INFO] Running com.fasterxml.jackson.databind.jsontype.deftyping.TestDefaultForMaps
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.009 s - in com.fasterxml.jackson.databind.jsontype.deftyping.TestDefaultForMaps
+[INFO] Running com.fasterxml.jackson.databind.jsontype.deftyping.TestDefaultForObject
+[INFO] Tests run: 14, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.021 s - in com.fasterxml.jackson.databind.jsontype.deftyping.TestDefaultForObject
+[INFO] Running com.fasterxml.jackson.databind.jsontype.deftyping.TestDefaultForEnums
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.014 s - in com.fasterxml.jackson.databind.jsontype.deftyping.TestDefaultForEnums
+[INFO] Running com.fasterxml.jackson.databind.jsontype.deftyping.TestDefaultWithCreators
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.012 s - in com.fasterxml.jackson.databind.jsontype.deftyping.TestDefaultWithCreators
+[INFO] Running com.fasterxml.jackson.databind.convert.TestConvertingSerializer
+[INFO] Tests run: 9, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.016 s - in com.fasterxml.jackson.databind.convert.TestConvertingSerializer
+[INFO] Running com.fasterxml.jackson.databind.convert.TestConvertingDeserializer
+[INFO] Tests run: 9, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.01 s - in com.fasterxml.jackson.databind.convert.TestConvertingDeserializer
+[INFO] Running com.fasterxml.jackson.databind.convert.TestUpdateViaObjectReader
+[INFO] Tests run: 8, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.006 s - in com.fasterxml.jackson.databind.convert.TestUpdateViaObjectReader
+[INFO] Running com.fasterxml.jackson.databind.convert.TestPolymorphicUpdateValue
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.002 s - in com.fasterxml.jackson.databind.convert.TestPolymorphicUpdateValue
+[INFO] Running com.fasterxml.jackson.databind.convert.UpdateValueTest
+[INFO] Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.003 s - in com.fasterxml.jackson.databind.convert.UpdateValueTest
+[INFO] Running com.fasterxml.jackson.databind.convert.TestMapConversions
+[INFO] Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.008 s - in com.fasterxml.jackson.databind.convert.TestMapConversions
+[INFO] Running com.fasterxml.jackson.databind.convert.NumericConversionTest
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.004 s - in com.fasterxml.jackson.databind.convert.NumericConversionTest
+[INFO] Running com.fasterxml.jackson.databind.convert.ScalarConversionTest
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.003 s - in com.fasterxml.jackson.databind.convert.ScalarConversionTest
+[INFO] Running com.fasterxml.jackson.databind.convert.TestStringConversions
+[INFO] Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.003 s - in com.fasterxml.jackson.databind.convert.TestStringConversions
+[INFO] Running com.fasterxml.jackson.databind.convert.ConvertingAbstractSerializer795Test
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.009 s - in com.fasterxml.jackson.databind.convert.ConvertingAbstractSerializer795Test
+[INFO] Running com.fasterxml.jackson.databind.convert.TestBeanConversions
+[INFO] Tests run: 9, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.01 s - in com.fasterxml.jackson.databind.convert.TestBeanConversions
+[INFO] Running com.fasterxml.jackson.databind.deser.creators.jdk8.DelegatingCreatorTest
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.458 s - in com.fasterxml.jackson.databind.deser.creators.jdk8.DelegatingCreatorTest
+[INFO] Running com.fasterxml.jackson.databind.deser.TestEmptyArrayBlockingQueueDeser
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.114 s - in com.fasterxml.jackson.databind.deser.TestEmptyArrayBlockingQueueDeser
+[INFO] Running com.fasterxml.jackson.databind.ext.jdk8.IntStreamSerializerTest
+[INFO] Tests run: 7, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.257 s - in com.fasterxml.jackson.databind.ext.jdk8.IntStreamSerializerTest
+[INFO] Running com.fasterxml.jackson.databind.ext.jdk8.LongStreamSerializerTest
+[INFO] Tests run: 7, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.258 s - in com.fasterxml.jackson.databind.ext.jdk8.LongStreamSerializerTest
+[INFO] Running com.fasterxml.jackson.databind.util.UnlimitedLookupCacheTest
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.019 s - in com.fasterxml.jackson.databind.util.UnlimitedLookupCacheTest
+[INFO] Running com.fasterxml.jackson.databind.convert.TestArrayConversions
+[INFO] Tests run: 7, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.007 s - in com.fasterxml.jackson.databind.convert.TestArrayConversions
+[INFO] Running com.fasterxml.jackson.databind.deser.creators.jdk8.EnumNamingTest
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.075 s - in com.fasterxml.jackson.databind.deser.creators.jdk8.EnumNamingTest
+[INFO] Running com.fasterxml.jackson.databind.ext.jdk8.StreamSerializerTest
+[INFO] Tests run: 10, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.36 s - in com.fasterxml.jackson.databind.ext.jdk8.StreamSerializerTest
+[INFO] Running com.fasterxml.jackson.databind.jsontype.ext.TestSubtypesExternalPropertyMissingProperty
+[INFO] Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.11 s - in com.fasterxml.jackson.databind.jsontype.ext.TestSubtypesExternalPropertyMissingProperty
+[INFO] Running com.fasterxml.jackson.databind.ext.jdk8.DoubleStreamSerializerTest
+[INFO] Tests run: 7, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.234 s - in com.fasterxml.jackson.databind.ext.jdk8.DoubleStreamSerializerTest
+[INFO] Running com.fasterxml.jackson.databind.jsontype.ext.TestPropertyCreatorSubtypesExternalPropertyMissingProperty
+[INFO] Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.056 s - in com.fasterxml.jackson.databind.jsontype.ext.TestPropertyCreatorSubtypesExternalPropertyMissingProperty
+[INFO] 
+[INFO] Results:
+[INFO] 
+[INFO] Tests run: 2329, Failures: 0, Errors: 0, Skipped: 0
+[INFO] 
+[INFO] 
+[INFO] --- jacoco-maven-plugin:0.8.4:report (report) @ jackson-databind ---
+[INFO] Loading execution data file /Users/jadlers/school/git/jackson-parent/jackson-databind/target/jacoco.exec
+[INFO] Analyzed bundle 'jackson-databind' with 578 classes
+[INFO] 
+[INFO] ---------< com.fasterxml.jackson.module:jackson-modules-java8 >---------
+[INFO] Building Jackson modules: Java 8 3.0.0-SNAPSHOT                    [2/6]
+[INFO] --------------------------------[ pom ]---------------------------------
+[INFO] 
+[INFO] --- maven-enforcer-plugin:3.0.0-M1:enforce (enforce-java) @ jackson-modules-java8 ---
+[INFO] 
+[INFO] --- build-helper-maven-plugin:1.7:add-source (add-generated-sources) @ jackson-modules-java8 ---
+[INFO] Source directory: /Users/jadlers/school/git/jackson-parent/jackson-modules-java8/target/generated-sources added.
+[INFO] 
+[INFO] ----< com.fasterxml.jackson.module:jackson-module-parameter-names >-----
+[INFO] Building Jackson-module-parameter-names 3.0.0-SNAPSHOT             [3/6]
+[INFO] -------------------------------[ bundle ]-------------------------------
+[INFO] 
+[INFO] --- maven-enforcer-plugin:3.0.0-M1:enforce (enforce-java) @ jackson-module-parameter-names ---
+[INFO] 
+[INFO] --- build-helper-maven-plugin:1.7:add-source (add-generated-sources) @ jackson-module-parameter-names ---
+[INFO] Source directory: /Users/jadlers/school/git/jackson-parent/jackson-modules-java8/parameter-names/target/generated-sources added.
+[INFO] 
+[INFO] --- replacer:1.5.3:replace (process-packageVersion) @ jackson-module-parameter-names ---
+[INFO] Replacement run on 1 file.
+[INFO] 
+[INFO] --- maven-resources-plugin:2.7:resources (default-resources) @ jackson-module-parameter-names ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 1 resource
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.0:compile (default-compile) @ jackson-module-parameter-names ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 2 source files to /Users/jadlers/school/git/jackson-parent/jackson-modules-java8/parameter-names/target/classes
+[INFO] 
+[INFO] --- maven-resources-plugin:2.7:testResources (default-testResources) @ jackson-module-parameter-names ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /Users/jadlers/school/git/jackson-parent/jackson-modules-java8/parameter-names/src/test/resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.0:testCompile (default-testCompile) @ jackson-module-parameter-names ---
+[INFO] No sources to compile
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.22.2:test (default-test) @ jackson-module-parameter-names ---
+[INFO] No tests to run.
+[INFO] 
+[INFO] --------< com.fasterxml.jackson.datatype:jackson-datatype-jdk8 >--------
+[INFO] Building Jackson datatype: jdk8 3.0.0-SNAPSHOT                     [4/6]
+[INFO] -------------------------------[ bundle ]-------------------------------
+[INFO] 
+[INFO] --- maven-enforcer-plugin:3.0.0-M1:enforce (enforce-java) @ jackson-datatype-jdk8 ---
+[INFO] 
+[INFO] --- build-helper-maven-plugin:1.7:add-source (add-generated-sources) @ jackson-datatype-jdk8 ---
+[INFO] Source directory: /Users/jadlers/school/git/jackson-parent/jackson-modules-java8/datatypes/target/generated-sources added.
+[INFO] 
+[INFO] --- replacer:1.5.3:replace (process-packageVersion) @ jackson-datatype-jdk8 ---
+[INFO] Replacement run on 1 file.
+[INFO] 
+[INFO] --- maven-resources-plugin:2.7:resources (default-resources) @ jackson-datatype-jdk8 ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 1 resource
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.0:compile (default-compile) @ jackson-datatype-jdk8 ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 2 source files to /Users/jadlers/school/git/jackson-parent/jackson-modules-java8/datatypes/target/classes
+[INFO] 
+[INFO] --- maven-resources-plugin:2.7:testResources (default-testResources) @ jackson-datatype-jdk8 ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /Users/jadlers/school/git/jackson-parent/jackson-modules-java8/datatypes/src/test/resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.0:testCompile (default-testCompile) @ jackson-datatype-jdk8 ---
+[INFO] No sources to compile
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.22.2:test (default-test) @ jackson-datatype-jdk8 ---
+[INFO] No tests to run.
+[INFO] 
+[INFO] -------< com.fasterxml.jackson.datatype:jackson-datatype-jsr310 >-------
+[INFO] Building Jackson datatype: JSR310 3.0.0-SNAPSHOT                   [5/6]
+[INFO] -------------------------------[ bundle ]-------------------------------
+[INFO] 
+[INFO] --- maven-enforcer-plugin:3.0.0-M1:enforce (enforce-java) @ jackson-datatype-jsr310 ---
+[INFO] 
+[INFO] --- replacer:1.5.3:replace (process-packageVersion) @ jackson-datatype-jsr310 ---
+[INFO] Replacement run on 1 file.
+[INFO] 
+[INFO] --- build-helper-maven-plugin:1.7:add-source (add-generated-sources) @ jackson-datatype-jsr310 ---
+[INFO] Source directory: /Users/jadlers/school/git/jackson-parent/jackson-modules-java8/datetime/target/generated-sources added.
+[INFO] 
+[INFO] --- maven-resources-plugin:2.7:resources (default-resources) @ jackson-datatype-jsr310 ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 2 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.0:compile (default-compile) @ jackson-datatype-jsr310 ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 46 source files to /Users/jadlers/school/git/jackson-parent/jackson-modules-java8/datetime/target/classes
+[INFO] 
+[INFO] --- maven-resources-plugin:2.7:testResources (default-testResources) @ jackson-datatype-jsr310 ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /Users/jadlers/school/git/jackson-parent/jackson-modules-java8/datetime/src/test/resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.0:testCompile (default-testCompile) @ jackson-datatype-jsr310 ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 62 source files to /Users/jadlers/school/git/jackson-parent/jackson-modules-java8/datetime/target/test-classes
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.22.2:test (default-test) @ jackson-datatype-jsr310 ---
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running com.fasterxml.jackson.datatype.jsr310.misc.DateTimeSchemasTest
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.37 s - in com.fasterxml.jackson.datatype.jsr310.misc.DateTimeSchemasTest
+[INFO] Running com.fasterxml.jackson.datatype.jsr310.misc.JDKSerializabilityTest
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.067 s - in com.fasterxml.jackson.datatype.jsr310.misc.JDKSerializabilityTest
+[INFO] Running com.fasterxml.jackson.datatype.jsr310.TestFeatures
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 s - in com.fasterxml.jackson.datatype.jsr310.TestFeatures
+[INFO] Running com.fasterxml.jackson.datatype.jsr310.TestMonthDaySerialization
+[INFO] Tests run: 8, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.094 s - in com.fasterxml.jackson.datatype.jsr310.TestMonthDaySerialization
+[INFO] Running com.fasterxml.jackson.datatype.jsr310.TestZonedDateTimeSerialization
+[INFO] Tests run: 58, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.125 s - in com.fasterxml.jackson.datatype.jsr310.TestZonedDateTimeSerialization
+[INFO] Running com.fasterxml.jackson.datatype.jsr310.TestDecimalUtils
+[INFO] Tests run: 15, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.014 s - in com.fasterxml.jackson.datatype.jsr310.TestDecimalUtils
+[INFO] Running com.fasterxml.jackson.datatype.jsr310.deser.InstantDeserTest
+[INFO] Tests run: 36, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.077 s - in com.fasterxml.jackson.datatype.jsr310.deser.InstantDeserTest
+[INFO] Running com.fasterxml.jackson.datatype.jsr310.deser.YearMonthDeserTest
+[INFO] Tests run: 8, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.019 s - in com.fasterxml.jackson.datatype.jsr310.deser.YearMonthDeserTest
+[INFO] Running com.fasterxml.jackson.datatype.jsr310.deser.LocalDateTimeDeserTest
+[INFO] Tests run: 32, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.038 s - in com.fasterxml.jackson.datatype.jsr310.deser.LocalDateTimeDeserTest
+[INFO] Running com.fasterxml.jackson.datatype.jsr310.deser.ZoneIdDeserTest
+[INFO] Tests run: 8, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.02 s - in com.fasterxml.jackson.datatype.jsr310.deser.ZoneIdDeserTest
+[INFO] Running com.fasterxml.jackson.datatype.jsr310.deser.OffsetTimeDeserTest
+[INFO] Tests run: 19, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.034 s - in com.fasterxml.jackson.datatype.jsr310.deser.OffsetTimeDeserTest
+[INFO] Running com.fasterxml.jackson.datatype.jsr310.deser.LocalDateDeserTest
+[INFO] Tests run: 25, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.035 s - in com.fasterxml.jackson.datatype.jsr310.deser.LocalDateDeserTest
+[INFO] Running com.fasterxml.jackson.datatype.jsr310.deser.DefaultTypingTest
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.002 s - in com.fasterxml.jackson.datatype.jsr310.deser.DefaultTypingTest
+[INFO] Running com.fasterxml.jackson.datatype.jsr310.deser.ZonedDateTimeDeserTest
+[INFO] Tests run: 8, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.01 s - in com.fasterxml.jackson.datatype.jsr310.deser.ZonedDateTimeDeserTest
+[INFO] Running com.fasterxml.jackson.datatype.jsr310.deser.PeriodDeserTest
+[INFO] Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.009 s - in com.fasterxml.jackson.datatype.jsr310.deser.PeriodDeserTest
+[INFO] Running com.fasterxml.jackson.datatype.jsr310.deser.LocalTimeDeserTest
+[INFO] Tests run: 18, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.016 s - in com.fasterxml.jackson.datatype.jsr310.deser.LocalTimeDeserTest
+[INFO] Running com.fasterxml.jackson.datatype.jsr310.deser.MonthDayDeserTest
+[INFO] Tests run: 12, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.013 s - in com.fasterxml.jackson.datatype.jsr310.deser.MonthDayDeserTest
+[INFO] Running com.fasterxml.jackson.datatype.jsr310.deser.OffsetDateTimeDeserTest
+[INFO] Tests run: 40, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.038 s - in com.fasterxml.jackson.datatype.jsr310.deser.OffsetDateTimeDeserTest
+[INFO] Running com.fasterxml.jackson.datatype.jsr310.deser.DurationDeserTest
+[INFO] Tests run: 32, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.03 s - in com.fasterxml.jackson.datatype.jsr310.deser.DurationDeserTest
+[INFO] Running com.fasterxml.jackson.datatype.jsr310.deser.ZoneOffsetDeserTest
+[INFO] Tests run: 11, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.005 s - in com.fasterxml.jackson.datatype.jsr310.deser.ZoneOffsetDeserTest
+[INFO] Running com.fasterxml.jackson.datatype.jsr310.deser.YearDeserTest
+[INFO] Tests run: 12, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.011 s - in com.fasterxml.jackson.datatype.jsr310.deser.YearDeserTest
+[INFO] Running com.fasterxml.jackson.datatype.jsr310.key.LocalTimeAsKeyTest
+[INFO] Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.006 s - in com.fasterxml.jackson.datatype.jsr310.key.LocalTimeAsKeyTest
+[INFO] Running com.fasterxml.jackson.datatype.jsr310.key.MonthDayAsKeyTest
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.003 s - in com.fasterxml.jackson.datatype.jsr310.key.MonthDayAsKeyTest
+[INFO] Running com.fasterxml.jackson.datatype.jsr310.key.DurationAsKeyTest
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.009 s - in com.fasterxml.jackson.datatype.jsr310.key.DurationAsKeyTest
+[INFO] Running com.fasterxml.jackson.datatype.jsr310.key.OffsetDateTimeAsKeyTest
+[INFO] Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.016 s - in com.fasterxml.jackson.datatype.jsr310.key.OffsetDateTimeAsKeyTest
+[INFO] Running com.fasterxml.jackson.datatype.jsr310.key.ZoneOffsetAsKeyTest
+[INFO] Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.009 s - in com.fasterxml.jackson.datatype.jsr310.key.ZoneOffsetAsKeyTest
+[INFO] Running com.fasterxml.jackson.datatype.jsr310.key.YearAsKeyTest
+[INFO] Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.024 s - in com.fasterxml.jackson.datatype.jsr310.key.YearAsKeyTest
+[INFO] Running com.fasterxml.jackson.datatype.jsr310.key.InstantAsKeyTest
+[INFO] Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.01 s - in com.fasterxml.jackson.datatype.jsr310.key.InstantAsKeyTest
+[INFO] Running com.fasterxml.jackson.datatype.jsr310.key.YearMonthAsKeyTest
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.004 s - in com.fasterxml.jackson.datatype.jsr310.key.YearMonthAsKeyTest
+[INFO] Running com.fasterxml.jackson.datatype.jsr310.key.LocalDateTimeAsKeyTest
+[INFO] Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.015 s - in com.fasterxml.jackson.datatype.jsr310.key.LocalDateTimeAsKeyTest
+[INFO] Running com.fasterxml.jackson.datatype.jsr310.key.ZoneIdAsKeyTest
+[INFO] Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.017 s - in com.fasterxml.jackson.datatype.jsr310.key.ZoneIdAsKeyTest
+[INFO] Running com.fasterxml.jackson.datatype.jsr310.key.LocalDateAsKeyTest
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.007 s - in com.fasterxml.jackson.datatype.jsr310.key.LocalDateAsKeyTest
+[INFO] Running com.fasterxml.jackson.datatype.jsr310.key.OffsetTimeAsKeyTest
+[INFO] Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.008 s - in com.fasterxml.jackson.datatype.jsr310.key.OffsetTimeAsKeyTest
+[INFO] Running com.fasterxml.jackson.datatype.jsr310.key.ZonedDateTimeAsKeyTest
+[INFO] Tests run: 8, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.011 s - in com.fasterxml.jackson.datatype.jsr310.key.ZonedDateTimeAsKeyTest
+[INFO] Running com.fasterxml.jackson.datatype.jsr310.key.PeriodAsKeyTest
+[INFO] Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.005 s - in com.fasterxml.jackson.datatype.jsr310.key.PeriodAsKeyTest
+[INFO] Running com.fasterxml.jackson.datatype.jsr310.TestYearDeserialization
+[INFO] Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.003 s - in com.fasterxml.jackson.datatype.jsr310.TestYearDeserialization
+[INFO] Running com.fasterxml.jackson.datatype.jsr310.TestPeriodSerialization
+[INFO] Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.002 s - in com.fasterxml.jackson.datatype.jsr310.TestPeriodSerialization
+[INFO] Running com.fasterxml.jackson.datatype.jsr310.ser.PeriodSerTest
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 s - in com.fasterxml.jackson.datatype.jsr310.ser.PeriodSerTest
+[INFO] Running com.fasterxml.jackson.datatype.jsr310.ser.TestLocalDateTimeSerializationWithCustomFormatter
+[INFO] Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.015 s - in com.fasterxml.jackson.datatype.jsr310.ser.TestLocalDateTimeSerializationWithCustomFormatter
+[INFO] Running com.fasterxml.jackson.datatype.jsr310.ser.LocalTimeSerTest
+[INFO] Tests run: 13, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.013 s - in com.fasterxml.jackson.datatype.jsr310.ser.LocalTimeSerTest
+[INFO] Running com.fasterxml.jackson.datatype.jsr310.ser.ZoneIdSerTest
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 s - in com.fasterxml.jackson.datatype.jsr310.ser.ZoneIdSerTest
+[INFO] Running com.fasterxml.jackson.datatype.jsr310.ser.WriteZoneIdTest
+[INFO] Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.005 s - in com.fasterxml.jackson.datatype.jsr310.ser.WriteZoneIdTest
+[INFO] Running com.fasterxml.jackson.datatype.jsr310.ser.OffsetDateTimeSerTest
+[INFO] Tests run: 12, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.009 s - in com.fasterxml.jackson.datatype.jsr310.ser.OffsetDateTimeSerTest
+[INFO] Running com.fasterxml.jackson.datatype.jsr310.ser.TestLocalDateSerializationWithCustomFormatter
+[INFO] Tests run: 12, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.008 s - in com.fasterxml.jackson.datatype.jsr310.ser.TestLocalDateSerializationWithCustomFormatter
+[INFO] Running com.fasterxml.jackson.datatype.jsr310.ser.TestLocalTimeSerializationWithCustomFormatter
+[INFO] Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.006 s - in com.fasterxml.jackson.datatype.jsr310.ser.TestLocalTimeSerializationWithCustomFormatter
+[INFO] Running com.fasterxml.jackson.datatype.jsr310.ser.TestYearSerializationWithCustomFormatter
+[INFO] Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.005 s - in com.fasterxml.jackson.datatype.jsr310.ser.TestYearSerializationWithCustomFormatter
+[INFO] Running com.fasterxml.jackson.datatype.jsr310.ser.YearMonthSerializationTest
+[INFO] Tests run: 12, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.033 s - in com.fasterxml.jackson.datatype.jsr310.ser.YearMonthSerializationTest
+[INFO] Running com.fasterxml.jackson.datatype.jsr310.ser.LocalDateSerTest
+[INFO] Tests run: 9, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.013 s - in com.fasterxml.jackson.datatype.jsr310.ser.LocalDateSerTest
+[INFO] Running com.fasterxml.jackson.datatype.jsr310.ser.MonthDaySerTest
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 s - in com.fasterxml.jackson.datatype.jsr310.ser.MonthDaySerTest
+[INFO] Running com.fasterxml.jackson.datatype.jsr310.ser.ZoneOffsetSerTest
+[INFO] Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 s - in com.fasterxml.jackson.datatype.jsr310.ser.ZoneOffsetSerTest
+[INFO] Running com.fasterxml.jackson.datatype.jsr310.ser.TestYearMonthSerializationWithCustomFormatter
+[INFO] Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 s - in com.fasterxml.jackson.datatype.jsr310.ser.TestYearMonthSerializationWithCustomFormatter
+[INFO] Running com.fasterxml.jackson.datatype.jsr310.ser.InstantSerTest
+[INFO] Tests run: 14, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.007 s - in com.fasterxml.jackson.datatype.jsr310.ser.InstantSerTest
+[INFO] Running com.fasterxml.jackson.datatype.jsr310.ser.OffsetTimeSerTest
+[INFO] Tests run: 12, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.005 s - in com.fasterxml.jackson.datatype.jsr310.ser.OffsetTimeSerTest
+[INFO] Running com.fasterxml.jackson.datatype.jsr310.ser.TestZonedDateTimeSerializationWithCustomFormatter
+[INFO] Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 s - in com.fasterxml.jackson.datatype.jsr310.ser.TestZonedDateTimeSerializationWithCustomFormatter
+[INFO] Running com.fasterxml.jackson.datatype.jsr310.ser.WriteNanosecondsTest
+[INFO] Tests run: 7, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.01 s - in com.fasterxml.jackson.datatype.jsr310.ser.WriteNanosecondsTest
+[INFO] Running com.fasterxml.jackson.datatype.jsr310.ser.DurationSerTest
+[INFO] Tests run: 11, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.005 s - in com.fasterxml.jackson.datatype.jsr310.ser.DurationSerTest
+[INFO] Running com.fasterxml.jackson.datatype.jsr310.ser.LocalDateTimeSerTest
+[INFO] Tests run: 12, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.005 s - in com.fasterxml.jackson.datatype.jsr310.ser.LocalDateTimeSerTest
+[INFO] Running com.fasterxml.jackson.datatype.jsr310.ser.YearSerTest
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 s - in com.fasterxml.jackson.datatype.jsr310.ser.YearSerTest
+[INFO] Running com.fasterxml.jackson.datatype.jsr310.TestOffsetDateTimeDeserialization
+[INFO] Tests run: 14, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.004 s - in com.fasterxml.jackson.datatype.jsr310.TestOffsetDateTimeDeserialization
+[INFO] 
+[INFO] Results:
+[INFO] 
+[INFO] Tests run: 596, Failures: 0, Errors: 0, Skipped: 0
+[INFO] 
+[INFO] 
+[INFO] -----------------< com.fasterxml.jackson:jackson-base >-----------------
+[INFO] Building jackson-base 1.0.0-SNAPSHOT                               [6/6]
+[INFO] --------------------------------[ pom ]---------------------------------
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Summary:
+[INFO] 
+[INFO] jackson-databind 3.0.0-SNAPSHOT .................... SUCCESS [ 49.578 s]
+[INFO] Jackson modules: Java 8 3.0.0-SNAPSHOT ............. SUCCESS [  0.030 s]
+[INFO] Jackson-module-parameter-names 3.0.0-SNAPSHOT ...... SUCCESS [  0.125 s]
+[INFO] Jackson datatype: jdk8 3.0.0-SNAPSHOT .............. SUCCESS [  0.126 s]
+[INFO] Jackson datatype: JSR310 3.0.0-SNAPSHOT ............ SUCCESS [  4.145 s]
+[INFO] jackson-base 1.0.0-SNAPSHOT ........................ SUCCESS [  0.010 s]
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  55.873 s
+[INFO] Finished at: 2020-02-27T12:21:46+01:00
+[INFO] ------------------------------------------------------------------------
