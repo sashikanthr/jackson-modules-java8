@@ -100,6 +100,7 @@ The structure of the issue is represented as follows. The dotted lines are what 
 
 ![issue-structure](<issue-structure.png>)
 
+Note: The same sequence diagram follows for DurationSerTest and DurationSerializaer (extending JSR310FormattedSerializer)
 
 ### Existing test cases relating to refactored code
 
