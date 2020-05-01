@@ -8,21 +8,26 @@ Modules:
 === Releases ===
 ------------------------------------------------------------------------
 
-2.11.0 (not yet released)
+2.11.1 (not yet released)
 
-#58: Should not parse `LocalDate`s from number (timestamp), or at least
+-
+
+2.11.0 (26-Apr-2020)
+
+#58: (datetime) Should not parse `LocalDate`s from number (timestamp), or at least
   should have an option preventing
  (reported by Bill O'N, fixed by Mike [kupci@github])
-#128: Timestamp keys from `ZonedDateTime`
+#128: (datetime) Timestamp keys from `ZonedDateTime`
  (reported by Michał Ż, fixed by Vetle L-R)
-#138: Prevent deserialization of "" as `null` for `Duration`, `Instant`, `LocalTime`, `OffsetTime`
-   and `YearMonth` in "strict" (non-lenient) mode
+#138: (datetime) Prevent deserialization of "" as `null` for `Duration`, `Instant`,
+  `LocalTime`, `OffsetTime` and `YearMonth` in "strict" (non-lenient) mode
  (contributed by Mike [kupci@github])
-#148: Allow strict `LocalDate` parsing
+#148: (datetime) Allow strict `LocalDate` parsing
  (requested by by Arturas G, fix contributed by Samantha W)
 - (datetime) Add explicit `ZoneId` serializer to force use of `ZoneId` as Type Id, and
   not inaccessible subtype (`ZoneRegion`): this to avoid JDK9+ Module Access problem
 
+2.10.3 (03-Mar-2020)
 2.10.2 (05-Jan-2020)
 
 No changes since 2.10.1
@@ -64,7 +69,7 @@ No changes since 2.9.8
 2.9.8 (15-Dec-2018)
 
 #90 (datetime): Performance issue with malicious `BigDecimal` input,
-   `InstantDeserializer`, `DurationDeserializer`
+   `InstantDeserializer`, `DurationDeserializer` (CVE-2018-1000873)
  (reported by Andriy P, fix contributed by Todd J)
 
 2.9.7 (19-Sep-2018)
